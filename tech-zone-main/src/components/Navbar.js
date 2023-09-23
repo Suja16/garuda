@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import SearchBar from "./SearchBar";
+
 const Navbar = () => {
   const { cartItems } = useSelector((state) => state.carts);
   const NavActive = ({ isActive }) => {
@@ -19,6 +21,7 @@ const Navbar = () => {
             </h2>
           </Link>
         </div>
+        <SearchBar/>
         <div className="nav-right">
           <ul className="nav-links flex gap-5 items-center">
             <li>
