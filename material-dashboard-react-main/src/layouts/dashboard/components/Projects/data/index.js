@@ -44,7 +44,7 @@ export default function data() {
           size="xs"
           sx={{
             border: ({ borders: { borderWidth }, palette: { white } }) =>
-              `${borderWidth[2]} solid ${white.main}`,
+            `${borderWidth[2]} solid ${white.main}`,
             cursor: "pointer",
             position: "relative",
 
@@ -72,14 +72,14 @@ export default function data() {
   return {
     columns: [
       { Header: "companies", accessor: "companies", width: "45%", align: "left" },
-      { Header: "members", accessor: "members", width: "10%", align: "left" },
+      // { Header: "members", accessor: "members", width: "10%", align: "left" },
       { Header: "budget", accessor: "budget", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "compitition", accessor: "completion", align: "center" },
     ],
 
     rows: [
       {
-        companies: <Company image={logoXD} name="Material UI XD Version" />,
+        companies: <Company image={logoXD} name="Boat" />,
         members: (
           <MDBox display="flex" py={1}>
             {avatars([
@@ -92,7 +92,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $14,000
+            ₹14,000
           </MDTypography>
         ),
         completion: (
@@ -113,7 +113,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $3,000
+            ₹3,000
           </MDTypography>
         ),
         completion: (
@@ -134,7 +134,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            Not set
+            ₹2500
           </MDTypography>
         ),
         completion: (
@@ -157,7 +157,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $20,500
+            ₹20,500
           </MDTypography>
         ),
         completion: (
@@ -175,7 +175,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $500
+            ₹500
           </MDTypography>
         ),
         completion: (
@@ -196,7 +196,7 @@ export default function data() {
         ),
         budget: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            $2,000
+            ₹2,000
           </MDTypography>
         ),
         completion: (

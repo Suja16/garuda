@@ -16,10 +16,10 @@ Coded by www.creative-tim.com
 export default {
   sales: {
     labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    datasets: { label: "Mobile apps", data: [50, 40, 300, 320, 500, 350, 200, 230, 500] },
+    datasets: { label: "Mobile apps", data: [500, 400, 3000, 3200, 5000, 3500, 2000, 2300, 5000] },
   },
   tasks: {
     labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    datasets: { label: "Desktop apps", data: [50, 40, 300, 220, 500, 250, 400, 230, 500] },
+    datasets: { label: "Desktop apps", data: [50, 40, 30000, 22000, 500, 250, 40000, 230, 50000] },
   },
 };
