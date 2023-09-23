@@ -48,6 +48,7 @@ import SignUp from "layouts/authentication/sign-up";
 // @mui icons
 import Icon from "@mui/material/Icon";
 import { ContactPhone } from "@mui/icons-material";
+import ProductForm from "components/ProductForm";
 
 const routes = [
   {
@@ -61,10 +62,10 @@ const routes = [
   {
     type: "collapse",
     name: " Add Product ",
-    key: "tables",
+    key: "add-product",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/add-product",
+    component: <ProductForm />,
   },
   {
     type: "collapse",

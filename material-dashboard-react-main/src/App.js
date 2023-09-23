@@ -52,6 +52,8 @@ import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "co
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
+import ProductForm from './components/ProductForm';
+
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -191,6 +193,7 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
+        <Route path="/product-form" element={<ProductForm />} />
         <Route path="*" element={<Navigate to="/dashboard" />} />
       </Routes>
     </ThemeProvider>
