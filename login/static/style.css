@@ -42,3 +42,47 @@ input {
     border-bottom: 1px solid #ccc;
     background-color: transparent;
 }
+
+.login-button,
+.signup-button{
+    background-color: #805605;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.login-button:hover,
+.signup-button:hover{
+    background-color: #684804;
+}
+
+.login-card,
+.signup-card {
+    background-color: white; /* Background color for the cards */
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-a-user-text {
+    text-align: center;
+    color: gray; /* Text color for "Not a user?" */
+    cursor: pointer;
+}
+
+.not-a-user-text a {
+    text-decoration: none;
+    color: #805605; /* Link color for "Sign up here" */
+    cursor: pointer;
+}
+
