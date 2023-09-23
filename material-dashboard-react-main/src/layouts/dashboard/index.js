@@ -33,6 +33,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import Footer from '../Footer';
 const currentDate = new Date();
 const day = currentDate.getDate();
   const month = currentDate.toLocaleString('default', { month: 'long' });
@@ -159,8 +160,8 @@ function Dashboard() {
           </Grid>
         </MDBox>
       </MDBox>
+      <Footer />
     </DashboardLayout>
   );
 }
-
 export default Dashboard;

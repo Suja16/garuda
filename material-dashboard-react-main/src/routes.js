@@ -47,6 +47,7 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import { ContactPhone } from "@mui/icons-material";
 
 const routes = [
   {
@@ -96,6 +97,14 @@ const routes = [
     icon: <Icon fontSize="small">person</Icon>,
     route: "/profile",
     component: <Profile />,
+  },
+  {
+    type: "collapse",
+    name: "contact us",
+    key: "contact-us",
+    icon: <Icon fontSize="small">call-support</Icon>,
+    route: "",
+    component: <ContactPhone  />,
   },
   {
     type: "collapse",
