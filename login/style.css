@@ -1,10 +1,10 @@
-body {
+/*body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f1f1f1; /* Background color for the entire page */
+    background-color: #f1f1f1; /* Background color for the entire page 
 }
 
 .container {
@@ -89,5 +89,4 @@ input {
     text-decoration: none;
     color: #805605; /* Link color for "Sign up here" */
     cursor: pointer;
-}
-
+}*/
