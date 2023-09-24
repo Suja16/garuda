@@ -1,0 +1,26 @@
+/* ConsignmentForm.css */
+
+/* Center the form horizontally and vertically */
+.consignment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Optional: Adjust this value for the desired height */
+  }
+  
+  /* Style the form elements */
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  select,
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Additional styles for specific form elements can be added here */
+  

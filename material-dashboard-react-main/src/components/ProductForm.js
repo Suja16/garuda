@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MDBox from "components/MDBox";
+import './ConsignmentForm.css';
 
 
 
@@ -60,6 +61,7 @@ const ConsignmentForm = () => {
 
     <div className="consignment-form">
       <div>
+        
         <label>Product Type:</label>
         <select value={productType} onChange={handleProductTypeChange}>
           <option value="">Select Product Type</option>
