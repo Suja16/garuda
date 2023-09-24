@@ -50,20 +50,20 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "author", accessor: "author", width: "45%", align: "left" },
-      { Header: "function", accessor: "function", align: "left" },
+      { Header: "Order ID", accessor: "author", width: "45%", align: "left" },
+      { Header: "last scanned at", accessor: "function", align: "left" },
       { Header: "status", accessor: "status", align: "center" },
-      { Header: "employed", accessor: "employed", align: "center" },
+      { Header: "ETA", accessor: "employed", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
     ],
 
     rows: [
       {
-        author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
-        function: <Job title="Manager" description="Organization" />,
+        author: <Author image={team2} name="#23nkcqjd00" email="john@creative-tim.com" />,
+        function: <Job title="LOCAL PO" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="IN TRANSIT" color="sky blue" variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -73,16 +73,16 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
           </MDTypography>
         ),
       },
       {
-        author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
+        author: <Author image={team3} name="#23nuii9z00" email="alexa@creative-tim.com" />,
+        function: <Job title="DNK PO" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="LEFT FOR CO" color="dark" variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -92,16 +92,16 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
           </MDTypography>
         ),
       },
       {
-        author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-        function: <Job title="Executive" description="Projects" />,
+        author: <Author image={team4} name="#23iy6g3g00" email="laurent@creative-tim.com" />,
+        function: <Job title="DNK PO" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="LEFT FOR CO" color="success" variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -111,16 +111,16 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
           </MDTypography>
         ),
       },
       {
-        author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
+        author: <Author image={team3} name="#2369rihc00" email="michael@creative-tim.com" />,
+        function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="UNDER PROCESS" color='yellow' variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -130,16 +130,16 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
           </MDTypography>
         ),
       },
       {
-        author: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
-        function: <Job title="Manager" description="Executive" />,
+        author: <Author image={team3} name="#23pn3iz300" email="richard@creative-tim.com" />,
+        function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="LEFT FOR PORT" color="dark" variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -149,16 +149,16 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
           </MDTypography>
         ),
       },
       {
-        author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
+        author: <Author image={team4} name="#2308bl0100" email="miriam@creative-tim.com" />,
+        function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="CUSTOMS DECLINED" color="dark" variant="gradient" size="sm" />
           </MDBox>
         ),
         employed: (
@@ -168,7 +168,45 @@ export default function data() {
         ),
         action: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            INVOICE
+          </MDTypography>
+        ),
+      },
+      {
+        author: <Author image={team4} name="#23a7zd6000" email="miriam@creative-tim.com" />,
+        function: <Job title="AT PORT" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="TO BE SHIPPED" color="dark" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            14/09/20
+          </MDTypography>
+        ),
+        action: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            INVOICE
+          </MDTypography>
+        ),
+      },
+      {
+        author: <Author image={team4} name="#23ah55w00" email="miriam@creative-tim.com" />,
+        function: <Job title="AT PORT" />,
+        status: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="SHIPPED" color="dark" variant="gradient" size="sm" />
+          </MDBox>
+        ),
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            14/09/20
+          </MDTypography>
+        ),
+        action: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            INVOICE
           </MDTypography>
         ),
       },

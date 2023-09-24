@@ -68,7 +68,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "orders",
+    name: "Orders",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
@@ -100,7 +100,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "contact us",
+    name: "Contact Us",
     key: "contact-us",
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "",
