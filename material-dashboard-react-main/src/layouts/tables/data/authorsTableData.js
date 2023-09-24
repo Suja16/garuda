@@ -46,7 +46,7 @@ export default function data() {
 
     rows: [
       {
-        author: <Author image={team2} name="#23nkcqjd00" email="john@creative-tim.com" />,
+        author: <Author name="#23nkcqjd00" email="john@creative-tim.com" />,
         function: <Job title="LOCAL PO" />,
         status: (
           <MDBox ml={-1}>
@@ -65,7 +65,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="#23nuii9z00" email="alexa@creative-tim.com" />,
+        author: <Author name="#23nuii9z00" email="alexa@creative-tim.com" />,
         function: <Job title="DNK PO" />,
         status: (
           <MDBox ml={-1}>
@@ -84,7 +84,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="#23iy6g3g00" email="laurent@creative-tim.com" />,
+        author: <Author name="#23iy6g3g00" email="laurent@creative-tim.com" />,
         function: <Job title="DNK PO" />,
         status: (
           <MDBox ml={-1}>
@@ -103,7 +103,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="#2369rihc00" email="michael@creative-tim.com" />,
+        author: <Author name="#2369rihc00" email="michael@creative-tim.com" />,
         function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
@@ -122,7 +122,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="#23pn3iz300" email="richard@creative-tim.com" />,
+        author: <Author name="#23pn3iz300" email="richard@creative-tim.com" />,
         function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
@@ -141,7 +141,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="#2308bl0100" email="miriam@creative-tim.com" />,
+        author: <Author name="#2308bl0100" email="miriam@creative-tim.com" />,
         function: <Job title="CUSTOMS OFFICE" />,
         status: (
           <MDBox ml={-1}>
@@ -160,7 +160,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="#23a7zd6000" email="miriam@creative-tim.com" />,
+        author: <Author name="#23a7zd6000" email="miriam@creative-tim.com" />,
         function: <Job title="AT PORT" />,
         status: (
           <MDBox ml={-1}>
@@ -179,7 +179,7 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="#23ah55w00" email="miriam@creative-tim.com" />,
+        author: <Author name="#23ah55w00" email="miriam@creative-tim.com" />,
         function: <Job title="AT PORT" />,
         status: (
           <MDBox ml={-1}>
