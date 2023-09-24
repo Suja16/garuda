@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import MDBox from "components/MDBox";
+
+
 
 const ConsignmentForm = () => {
   const [productType, setProductType] = useState('');
@@ -53,6 +56,8 @@ const ConsignmentForm = () => {
   };
 
   return (
+    <MDBox py={3}>
+
     <div className="consignment-form">
       <div>
         <label>Product Type:</label>
@@ -130,8 +135,8 @@ const ConsignmentForm = () => {
           <option value="NO">NO</option>
         </select>
       </div>
-
     </div>
+    </MDBox>
   );
 };
 

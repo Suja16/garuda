@@ -30,6 +30,8 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
 
+import React from "react";
+
 function CoverLayout({ coverHeight, image, children }) {
   return (
     <PageLayout>
