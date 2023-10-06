@@ -20,7 +20,13 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
-import Footer from "layouts/authentication/components/Footer";
+import imgSrc from "../../assets/images/modi.png";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+
+
+
 const currentDate = new Date();
 const day = currentDate.getDate();
   const month = currentDate.toLocaleString('default', { month: 'long' });
@@ -35,21 +41,26 @@ function Dashboard() {
       <DashboardNavbar />
       <MDBox py={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="dark"
-                icon="weekend"
-                title="Pending-order"
-                count={281}
-                percentage={{
-                  color: "success",
-                  amount: "+55",
-                  label: "than lask week",
-                }}
-              />
-            </MDBox>
+        <Grid item xs={12} md={6} lg={3}>
+          <img src={imgSrc} alt="Image Alt Text" />
+        </Grid>
+        <Grid item xs={12} md={6} lg={3}>
+            <Paper elevation={3} style={{ padding: '16px' }}>
+              <Typography variant="h6" gutterBottom>
+                Welcome back
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Dak Ghar Nirayat Kendra is your destination for excellence in postal services and comprehensive import-export solutions. Trust in our commitment to secure and efficient mail and package deliveries, along with streamlined global logistics, all underpinned by our unwavering dedication to sustainable practices.
+              </Typography>
+              <a href="https://dnk.cept.gov.in/customers.web/" target="_blank" rel="noopener noreferrer">
+                <Button variant="contained" color="primary">
+                  Learn More
+                </Button>
+              </a>
+
+            </Paper>
           </Grid>
+          
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -64,6 +75,7 @@ function Dashboard() {
               />
             </MDBox>
           </Grid>
+          
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -91,7 +103,23 @@ function Dashboard() {
                   amount: " 4.1",
                   label: "overall rating",
                 }}
+                
 
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={1.5}>
+              <ComplexStatisticsCard
+                color="dark"
+                icon="weekend"
+                title="Pending-order"
+                count={281}
+                percentage={{
+                  color: "success",
+                  amount: "+55",
+                  label: "than lask week",
+                }}
               />
             </MDBox>
           </Grid>
@@ -108,6 +136,7 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
+            
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
@@ -123,6 +152,7 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
+            
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
