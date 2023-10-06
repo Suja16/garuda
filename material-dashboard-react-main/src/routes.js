@@ -11,6 +11,7 @@ import Cover from "layouts/authentication/sign-up";
 import Icon from "@mui/material/Icon";
 import { ContactPhone } from "@mui/icons-material";
 import ProductForm from "components/ProductForm";
+import KYCForm from "components/KYCForm";
 
 const routes = [
   {
@@ -23,11 +24,26 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "KYC Registration",
+    key: "kyc-registration",
+    icon: <Icon fontSize="small">receipt_long</Icon>,
+    route: "/kyc-registration",
+    component: <KYCForm/>,
+  },
+  {
+    type: "collapse",
     name: " Add Product ",
     key: "add-product",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/add-product",
     component: <ProductForm />,
+  },
+  {
+    type: "collapse",
+    name: " Product Listed ",
+    key: "product-listed",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "",
   },
   {
     type: "collapse",
@@ -70,12 +86,7 @@ const routes = [
     component: <ContactPhone  />,
   },
   {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <Cover />,
+    
   },
 ];
 

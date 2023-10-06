@@ -5,139 +5,105 @@ import './ConsignmentForm.css';
 
 
 const ConsignmentForm = () => {
-  const [productType, setProductType] = useState('');
-  const [itemCategory, setItemCategory] = useState('');
-  const [instructions, setInstructions] = useState('');
-  const [numTypesOfItems, setNumTypesOfItems] = useState('');
-  const [grossWeight, setGrossWeight] = useState('');
-  const [totalValue, setTotalValue] = useState('');
-  const [sdrValue, setSdrValue] = useState('');
-  const [numLicensesInvoices, setNumLicensesInvoices] = useState('');
-  const [selectedPBE, setSelectedPBE] = useState('');
-  const [selfFilling, setSelfFilling] = useState('');
+ 
+  const [productTitle, setProductTitle] = useState('');
+  const [productSKU, setProductSKU] = useState('');
+  const [productDescription, setProductDescription] = useState('');
+  const [productMRP, setProductMRP] = useState('');
+  const [productSP, setProductSP] = useState('');
+  const [productCategory, setProductCategory] = useState('');
+  const [productImage, setProductImage] = useState('');
 
-  const handleProductTypeChange = (event) => {
-    setProductType(event.target.value);
+  
+
+  const handleProductTitleChange = (event) => {
+    setProductTitle(event.target.value);
   };
 
-  const handleItemCategoryChange = (event) => {
-    setItemCategory(event.target.value);
+  const handleProductSKUChange = (event) => {
+    setProductSKU(event.target.value);
   };
 
-  const handleInstructionsChange = (event) => {
-    setInstructions(event.target.value);
+  const handleProductDescriptionChange = (event) => {
+    setProductDescription(event.target.value);
   };
 
-  const handleNumTypesOfItemsChange = (event) => {
-    setNumTypesOfItems(event.target.value);
+  const handleProductMRPChange = (event) => {
+    setProductMRP(event.target.value);
   };
 
-  const handleGrossWeightChange = (event) => {
-    setGrossWeight(event.target.value);
+  const handleProductSPChange = (event) => {
+    setProductSP(event.target.value);
   };
 
-  const handleTotalValueChange = (event) => {
-    setTotalValue(event.target.value);
+  const handleProductCategoryChange = (event) => {
+    setProductCategory(event.target.value);
   };
 
-  const handleSdrValueChange = (event) => {
-    setSdrValue(event.target.value);
+  const handleProductImageChange = (event) => {
+    setProductImage(event.target.value);
   };
 
-  const handleNumLicensesInvoicesChange = (event) => {
-    setNumLicensesInvoices(event.target.value);
-  };
-
-  const handlePBEChange = (event) => {
-    setSelectedPBE(event.target.value);
-  };
-
-  const handleSelfFillingChange = (event) => {
-    setSelfFilling(event.target.value);
-  };
+  
 
   return (
     <MDBox py={3}>
 
-    <div className="consignment-form">
-      <div>
+    <form className="consignment-form">
+      
+      <h1>Add Product</h1>
+
+      <div className='prod-form-field'>
+        <label>Product Title:</label>
+        <input type="text" value={productTitle} onChange={handleProductTitleChange} />
+      </div>
+
+      <div className='prod-form-field'>
+        <label>Product SKU:</label>
+        <input type="text" value={productSKU} onChange={handleProductSKUChange} />
+      </div>
+
+      <div className='prod-form-field'>
+        <label >Product Description:</label>
+        <textarea id="Description" placeholder="Enter product description"type="text" value={productDescription} onChange={handleProductDescriptionChange} className='description' />
+      </div>
+
+      <div className='prod-form-field mrp'>
+        <div>
+        <label>Product MRP:</label>
+        <input type="text" value={productMRP} onChange={handleProductMRPChange} />
+        </div>
         
-        <label>Product Type:</label>
-        <select value={productType} onChange={handleProductTypeChange}>
-          <option value="">Select Product Type</option>
-          <option value="International EMS Merchandise">International EMS Merchandise</option>
-          <option value="International EMS Document">International EMS Document</option>
-          <option value="International Regd. Small Packet">International Regd. Small Packet</option>
-          <option value="International Air Parcel">International Air Parcel</option>
-          <option value="International RegdL. Letter">International RegdL. Letter</option>
-          <option value="International Tracked Packet Service">International Tracked Packet Service</option>
+      </div>
+
+      <div className='prod-form-field'>
+        <label>Product Selling Price:</label>
+        <input type="text" value={productSP} onChange={handleProductSPChange} />
+      </div>
+
+      <div className='prod-form-field'>
+        <label>Product Category:</label>
+        <select value={productCategory} onChange={handleProductCategoryChange}>
+          <option value="">Select Product Category</option>
+          <option value="Category 1">Category 1</option>
+          <option value="Category 2">Category 2</option>
+          <option value="Category 3">Category 3</option>
+          <option value="Category 4">Category 4</option>
+          <option value="Category 5">Category 5</option>
+          <option value="Category 6">Category 6</option>
+          <option value="Category 7">Category 7</option>
+          <option value="Category 8">Category 8</option>
+          <option value="Category 9">Category 9</option>
+          <option value="Category 10">Category 10</option>
         </select>
       </div>
 
       <div>
-        <label>Select Category of Item:</label>
-        <select value={itemCategory} onChange={handleItemCategoryChange}>
-          <option value="">Select Item Category</option>
-          <option value="Commercial Sample">Commercial Sample</option>
-          <option value="Returned Goods">Returned Goods</option>
-          <option value="Sale of Goods">Sale of Goods</option>
-          <option value="Others">Others</option>
-        </select>
+        <label for="myfile">Product Image:</label>
+        <input type="file" id="myFile" name="myFile"value={productImage} onChange={handleProductImageChange} />
+        <input type="submit" value="Submit" className='Submit'></input>
       </div>
-
-      <div>
-        <label>Instructions in case of Non-Delivery:</label>
-        <select value={instructions} onChange={handleInstructionsChange}>
-          <option value="">Select Instructions</option>
-          <option value="Abandoned">Abandoned</option>
-          <option value="RTS - Priority">RTS - Priority</option>
-          <option value="RTS - Non Priority">RTS - Non Priority</option>
-        </select>
-      </div>
-
-      <div>
-        <label>No. of Types of items in Consignment:</label>
-        <input type="number" value={numTypesOfItems} onChange={handleNumTypesOfItemsChange} />
-      </div>
-
-      <div>
-        <label>Gross Weight:</label>
-        <input type="number" value={grossWeight} onChange={handleGrossWeightChange} />
-      </div>
-
-      <div>
-        <label>Total Value (INR):</label>
-        <input type="number" value={totalValue} onChange={handleTotalValueChange} />
-      </div>
-
-      <div>
-        <label>SDR Value (INR):</label>
-        <input type="number" value={sdrValue} onChange={handleSdrValueChange} />
-      </div>
-
-      <div>
-        <label>No. of Licenses/Invoices/Certificates:</label>
-        <input type="text" value={numLicensesInvoices} onChange={handleNumLicensesInvoicesChange} />
-      </div>
-
-      <div>
-        <label>Select PBE:</label>
-        <select value={selectedPBE} onChange={handlePBEChange}>
-          <option value="">Select PBE</option>
-          <option value="PBE III(E-COMMERCE ITEMS)">PBE III(E-COMMERCE ITEMS)</option>
-          <option value="PBE IV(NON E-COMMERCE ITEMS)">PBE IV(NON E-COMMERCE ITEMS)</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Self Filling:</label>
-        <select value={selfFilling} onChange={handleSelfFillingChange}>
-          <option value="">Select Self Filling</option>
-          <option value="YES">YES</option>
-          <option value="NO">NO</option>
-        </select>
-      </div>
-    </div>
+    </form>
     </MDBox>
   );
 };

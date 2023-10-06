@@ -2,25 +2,68 @@
 
 /* Center the form horizontally and vertically */
 .consignment-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Optional: Adjust this value for the desired height */
-  }
-  
-  /* Style the form elements */
-  label {
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  select,
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-  }
-  
-  /* Additional styles for specific form elements can be added here */
-  
+  height: 100%;  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the form elements */
+label {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: 'Inter';
+  color: #745700;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius:12px;
+  border-color: #745700;
+}
+
+h1{
+  margin-bottom: 75px;
+  color: #023047;
+  border: 2px;
+}
+
+.prod-form-field{
+  height: 60px;
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+.description{
+height: 200px;
+width: 400px;
+margin-bottom: 50px;
+max-lines: 50;
+border-radius: 12px;
+}
+
+.mrp{
+margin-top: 150px;
+}
+
+.Submit{
+width: 150px;
+background-color: #4dce57;
+cursor: pointer;
+}
+
+body{
+background-color: #023047;
+}
+
+::placeholder{
+padding-left: 2px;
+padding-top: 2px;
+}
+/* Additional styles for specific form elements can be added here */
