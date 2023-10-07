@@ -68,69 +68,77 @@ function Dashboard() {
           </Paper>
         </Grid>
 
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                icon="leaderboard"
-                title="Total Order"
-                count="2,300"
-                percentage={{
-                  color: "success",
-                  amount: "+3%",
-                  label: "than last month",
-                }}
-              />
-            </MDBox>
-          </Grid>
-          
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="success"
-                icon="store"
-                title="Revenue"
-                count="34k"
-                percentage={{
-                  color: "success",
-                  amount: "+1%",
-                  label: "than yesterday",
-                }}
-              />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="person_add"
-                title="review"
-                count="1000"
-                percentage={{
-                  color: "success",
-                  amount: " 4.1",
-                  label: "overall rating",
-                }}
-                
+        <Grid container spacing={3}>
+  <Grid item xs={12} md={6} lg={6}>
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={6} lg={6}>
+        <MDBox mb={1.5}>
+          <ComplexStatisticsCard
+            icon="leaderboard"
+            title="Total Order"
+            count="2,300"
+            percentage={{
+              color: "success",
+              amount: "+3%",
+              label: "than last month",
+            }}
+          />
+        </MDBox>
+      </Grid>
+      <Grid item xs={12} md={6} lg={6}>
+        <MDBox mb={1.5}>
+          <ComplexStatisticsCard
+            color="success"
+            icon="store"
+            title="Revenue"
+            count="34k"
+            percentage={{
+              color: "success",
+              amount: "+1%",
+              label: "than yesterday",
+            }}
+          />
+        </MDBox>
+      </Grid>
+    </Grid>
+  </Grid>
 
-              />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="dark"
-                icon="weekend"
-                title="Pending-order"
-                count={281}
-                percentage={{
-                  color: "success",
-                  amount: "+55",
-                  label: "than lask week",
-                }}
-              />
-            </MDBox>
-          </Grid>
-        </Grid>
+  <Grid item xs={12} md={6} lg={6}>
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={6} lg={6}>
+        <MDBox mb={1.5}>
+          <ComplexStatisticsCard
+            color="primary"
+            icon="person_add"
+            title="review"
+            count="1000"
+            percentage={{
+              color: "success",
+              amount: " 4.1",
+              label: "overall rating",
+            }}
+          />
+        </MDBox>
+      </Grid>
+      <Grid item xs={12} md={6} lg={6}>
+        <MDBox mb={1.5}>
+          <ComplexStatisticsCard
+            color="dark"
+            icon="weekend"
+            title="Pending-order"
+            count={281}
+            percentage={{
+              color: "success",
+              amount: "+55",
+              label: "than last week",
+            }}
+          />
+        </MDBox>
+      </Grid>
+    </Grid>
+  </Grid>
+</Grid>
+</Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={4}>
