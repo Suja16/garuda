@@ -91,9 +91,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <NotificationItem icon={<Icon>email</Icon>} title="Check new messages" />
-      <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" />
-      <NotificationItem icon={<Icon>shopping_cart</Icon>} title="Payment successfully completed" />
+      <NotificationItem icon={<Icon>receipt receipt_long</Icon>} title="Queries"/>
+      {/* <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" /> */}
+      <NotificationItem icon={<Icon>email</Icon>} title="Seller-Buyer Interface" />
     </Menu>
   );
 
@@ -128,6 +128,11 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <Link to="/authentication/sign-in/basic">
                 <IconButton sx={navbarIconButton} size="small" disableRipple>
                   <Icon sx={iconsStyle}>account_circle</Icon>
+                </IconButton>
+              </Link>
+              <Link to="">
+                <IconButton sx={navbarIconButton} size="small" disableRipple>
+                  <Icon sx={iconsStyle}>podcasts</Icon>
                 </IconButton>
               </Link>
               <IconButton

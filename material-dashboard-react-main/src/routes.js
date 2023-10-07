@@ -9,7 +9,7 @@ import Cover from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
-import { ContactPhone } from "@mui/icons-material";
+import { ContactPhone, Podcasts } from "@mui/icons-material";
 import ProductForm from "components/ProductForm";
 import KYCForm from "components/KYCForm";
 
@@ -86,7 +86,12 @@ const routes = [
     component: <ContactPhone  />,
   },
   {
-    
+    type: "collapse",
+    name: "Podcasts",
+    key: "podcasts",
+    icon: <Icon fontSize="small">podcasts</Icon>,
+    route: "podcasts",
+    component: <Podcasts  />,
   },
 ];
 

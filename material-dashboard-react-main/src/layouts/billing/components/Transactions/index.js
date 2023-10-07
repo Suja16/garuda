@@ -46,18 +46,18 @@ function Transactions() {
           sx={{ listStyle: "none" }}
         >
           <Transaction
-            color="error"
+            color="success"
             icon="expand_more"
-            name="Netflix"
+            name="Kasmiri Mats"
             description="27 March 2020, at 12:30 PM"
-            value="- $ 2,500"
+            value="+ ₹2,500"
           />
           <Transaction
             color="success"
             icon="expand_less"
-            name="Apple"
+            name="Kashmiri Garments"
             description="27 March 2020, at 04:30 AM"
-            value="+ $ 2,000"
+            value="+ ₹2,000"
           />
         </MDBox>
         <MDBox mt={1} mb={2}>
@@ -76,28 +76,28 @@ function Transactions() {
           <Transaction
             color="success"
             icon="expand_less"
-            name="Stripe"
+            name="Plain Cloth Turbans"
             description="26 March 2020, at 13:45 PM"
-            value="+ $ 750"
+            value="+ ₹750"
           />
           <Transaction
             color="success"
             icon="expand_less"
-            name="HubSpot"
+            name="Hand woven rugs"
             description="26 March 2020, at 12:30 PM"
-            value="+ $ 1,000"
+            value="+ ₹1,000"
           />
           <Transaction
             color="success"
             icon="expand_less"
-            name="Creative Tim"
+            name="Masking Cloth"
             description="26 March 2020, at 08:30 AM"
-            value="+ $ 2,500"
+            value="+ ₹2,500"
           />
           <Transaction
             color="dark"
             icon="priority_high"
-            name="Webflow"
+            name="Silk Bedsheets"
             description="26 March 2020, at 05:00 AM"
             value="Pending"
           />
