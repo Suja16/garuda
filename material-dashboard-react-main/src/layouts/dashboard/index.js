@@ -24,6 +24,7 @@ import imgSrc from "../../assets/images/modi.png";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import './dashboard.css'
 
 
 
@@ -42,7 +43,9 @@ function Dashboard() {
       <MDBox py={3}>
         <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={3}>
+        <MDBox mb={1.5}>
           <img src={imgSrc} alt="Image Alt Text" />
+        </MDBox>
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
             <Paper elevation={3} style={{ padding: '16px' }}>

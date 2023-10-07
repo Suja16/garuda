@@ -64,7 +64,7 @@ const colors = {
   },
 
   light: {
-    main: "#f0f2f566",
+    main: "#1976D2",
     focus: "#f0f2f566",
   },
 
