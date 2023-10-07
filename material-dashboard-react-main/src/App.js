@@ -120,7 +120,7 @@ export default function App() {
       height="3.25rem"
       bgColor="white"
       shadow="sm"
-      borderRadius="50%"
+      borderRadius="50%"  
       position="fixed"
       right="2rem"
       bottom="2rem"

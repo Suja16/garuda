@@ -24,6 +24,10 @@ const colors = {
     main: "#ffffff",
     focus: "#ffffff",
   },
+  blue: {
+    main: "#1976D2",
+    focus: "#1976D2",
+  },
 
   black: {
     light: "#000000",
@@ -82,6 +86,11 @@ const colors = {
     800: "#343a40",
     900: "#212529",
   },
+  gold: {
+    main: "#C39F1F",
+    dark: "#C39F1F",
+  },
+
 
   gradients: {
     primary: {
