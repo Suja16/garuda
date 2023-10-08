@@ -94,7 +94,6 @@ const ConsignmentForm = () => {
           <option value="Category 7">Home Decor</option>
           <option value="Category 8">Fashion</option>
           <option value="Category 9">Accesories</option>
-          {/* <option value="Category 10">Category 10</option> */}
         </select>
       </div>
 

@@ -37,20 +37,12 @@ const podcastStyle = {
 function Pod() {
   const podcasts = [
     {
-      title: "YouTube Video",
-      host: "Ankit Sahu",
-      date: "October 10, 2023",
+      title: "Workshop on E-Commerce Exports & Dak Ghar Niryat Kendra (DGNK)",
+      host: "Tamil Nadu Postal Circle",
+      date: "18th July, 2023",
       description: "Watch this YouTube video:",
       youtubeEmbed: (
-        <iframe
-          width="790"
-          height="444"
-          src="https://www.youtube.com/embed/Ug9lI4OJ9QA"
-          title="Dak Ghar Niryat Kendra - Step by Step Process | India Post | Hindi | Ankit Sahu | ExportWala |"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DBFK8_5GH1w?si=9zea1AG3RuqeNx8K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       ),
     },
   ];
