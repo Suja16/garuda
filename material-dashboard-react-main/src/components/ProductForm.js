@@ -1,7 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import MDBox from "components/MDBox";
 import './ConsignmentForm.css';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyB_k8huWepobUHQs2WqlCUI8Lh514MS7D8",
+  authDomain: "garuda-d278e.firebaseapp.com",
+  projectId: "garuda-d278e",
+  storageBucket: "garuda-d278e.appspot.com",
+  messagingSenderId: "47109051213",
+  appId: "1:47109051213:web:958dc62e04eed168319d04",
+  measurementId: "G-6MM30DX7TV"
+};
+
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
 
 const ConsignmentForm = () => {
@@ -59,7 +73,7 @@ const ConsignmentForm = () => {
     setProductImage(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
   
     // Check if the description contains blocked keywords
@@ -70,14 +84,34 @@ const ConsignmentForm = () => {
     if (containsBlockedKeyword) {
       setErrorMessage('Contains Blocked Keyword. Please make sure you are trying to sell a product that is allowed.');
     } else {
-      setProductTitle('');
-      setProductSKU('');
-      setProductDescription('');
-      setProductMRP('');
-      setProductSP('');
-      setProductCategory('');
-      setProductImage('');
-      setErrorMessage('');
+      // Create a data object with the form values
+      const productData = {
+        title: productTitle,
+        sku: productSKU,
+        description: productDescription,
+        mrp: productMRP,
+        sp: productSP,
+        category: productCategory,
+        image: productImage,
+      };
+  
+      try {
+        // Add the productData to Firestore
+        const docRef = await addDoc(collection(firestore, 'products'), productData);
+        console.log('Document written with ID: ', docRef.id);
+  
+        // Clear the form fields and error message
+        setProductTitle('');
+        setProductSKU('');
+        setProductDescription('');
+        setProductMRP('');
+        setProductSP('');
+        setProductCategory('');
+        setProductImage('');
+        setErrorMessage('');
+      } catch (error) {
+        console.error('Error adding document: ', error);
+      }
     }
   };
 
