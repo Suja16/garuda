@@ -13,6 +13,8 @@ import { ContactPhone, Podcasts } from "@mui/icons-material";
 import ProductForm from "components/ProductForm";
 import KYCForm from "components/KYCForm";
 import ContactUs from "components/ContactUs";
+import ProductListing from "components/ProductListing";
+import Pod from "components/Pod";
 
 const routes = [
   {
@@ -44,8 +46,8 @@ const routes = [
     name: " Product Listed ",
     key: "product-listed",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "product-listed",
-    
+    route: "product-listing",
+    component: <ProductListing/>
   },
   {
     type: "collapse",
@@ -89,12 +91,14 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Podcasts",
+    name: " Podcasts ",
     key: "podcasts",
     icon: <Icon fontSize="small">podcasts</Icon>,
     route: "podcasts",
-    component: <Podcasts  />,
+    component: <Pod/>
   },
+
+  
 ];
 
 export default routes;

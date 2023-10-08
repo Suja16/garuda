@@ -36,7 +36,7 @@ function Billing() {
               {/* <MDBox mb={3}> */}
                 <ReportsLineChart
                   color="info"
-                  title="overall growth"
+                  title="total revenue"
                   description="total earning in the platform per month"
                   date="just updated"
                   chart={tasks}

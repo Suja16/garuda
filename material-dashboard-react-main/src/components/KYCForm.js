@@ -148,3 +148,4 @@ const KYCForm = () => {
 };
 
 export default KYCForm;
+
