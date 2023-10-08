@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, getDocs, collection } from 'firebase/firestore'; 
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB_k8huWepobUHQs2WqlCUI8Lh514MS7D8",
+  authDomain: "garuda-d278e.firebaseapp.com",
+  projectId: "garuda-d278e",
+  storageBucket: "garuda-d278e.appspot.com",
+  messagingSenderId: "47109051213",
+  appId: "1:47109051213:web:958dc62e04eed168319d04",
+  measurementId: "G-6MM30DX7TV"
+};
+
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
 const containerStyle = {
   marginTop: "50px",
@@ -14,7 +29,7 @@ const productContainerStyle = {
 };
 
 const imageStyle = {
-  widht: "200px", 
+  width: "200px", 
   height: "200px",
   marginRight: "5px", 
 };
@@ -33,48 +48,58 @@ const sectionTextStyle = {
 };
 
 function ProductListing() {
-  const product = {
-    title: " #1 Warli Painted Pot",
-    sku: "750",
-    description:
-      "Warli painting is simple and linear, with maximum use of triangular shapes. They draw inspiration from every life for their themes. The most important aspect of the painting is that it does not depict mythological characters or images of deities, but social life.",
-    mrp: "₹5000",
-    sp: "₹6000",
-    category: "Pottery",
-    image:
-      "https://i.pinimg.com/1200x/86/8a/d1/868ad1c3b3a2397abac6216f148ef3f2.jpg",
+  const [products, setProducts] = useState([]); 
+
+  
+  const fetchProducts = async () => {
+   
+    const querySnapshot = await getDocs(collection(firestore, 'products'));
+    const productData = [];
+    
+    querySnapshot.forEach((doc) => {
+      productData.push(doc.data());
+    });
+
+    setProducts(productData);
   };
+
+  useEffect(() => {
+  
+    fetchProducts();
+  }, []);
 
   return (
     <DashboardLayout>
       <DashboardNavbar absolute isMini />
       <MDBox style={containerStyle}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <MDBox mb={3}>
-              <h2>{product.title}</h2>
-              <div style={productContainerStyle}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={imageStyle}
-                />
-                <div style={sectionStyle}>
-                  <p style={sectionTextStyle}>
-                    <strong>Product Description:</strong> {product.description}
-                    <br />
-                    <strong>Product MRP:</strong> {product.mrp}
-                    <br />
-                    <strong>Product Selling Price:</strong> {product.sp}
-                    <br />
-                    <strong>Product Category:</strong> {product.category}
-                    <br />
-                    <strong>Product SKU:</strong> {product.sku}
-                  </p>
+          {products.map((product, index) => (
+            <Grid item xs={12} key={index}>
+              <MDBox mb={3}>
+                <h2>{product.title}</h2>
+                <div style={productContainerStyle}>
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    style={imageStyle}
+                  />
+                  <div style={sectionStyle}>
+                    <p style={sectionTextStyle}>
+                      <strong>Product Description:</strong> {product.description}
+                      <br />
+                      <strong>Product MRP:</strong> {product.mrp}
+                      <br />
+                      <strong>Product Selling Price:</strong> {product.sp}
+                      <br />
+                      <strong>Product Category:</strong> {product.category}
+                      <br />
+                      <strong>Product SKU:</strong> {product.sku}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </MDBox>
-          </Grid>
+              </MDBox>
+            </Grid>
+          ))}
         </Grid>
       </MDBox>
     </DashboardLayout>
