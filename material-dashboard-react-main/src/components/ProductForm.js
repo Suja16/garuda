@@ -3,6 +3,7 @@ import MDBox from "components/MDBox";
 import './ConsignmentForm.css';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_k8huWepobUHQs2WqlCUI8Lh514MS7D8",
@@ -16,7 +17,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
-
+const storage = getStorage(app);
 
 const ConsignmentForm = () => {
   const [productTitle, setProductTitle] = useState('');
@@ -28,6 +29,7 @@ const ConsignmentForm = () => {
   const [productImage, setProductImage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [productAdded, setProductAdded] = useState(false);
+  const [selectedFileName, setSelectedFileName] = useState('');
 
   /* const [blockedKeywords, setBlockedKeywords] = useState([]); */
 
@@ -71,9 +73,20 @@ const ConsignmentForm = () => {
     setProductCategory(event.target.value);
   };
 
-  const handleProductImageChange = (event) => {
-    setProductImage(event.target.value);
+  const handleProductImageChange = async (event) => {
+    const file = event.target.files[0];
+    const fileName = productSKU || 'uniqueFileName';
+    const storageRef = ref(storage, `productImages/${fileName}`);
+    try {
+      const snapshot = await uploadBytesResumable(storageRef, file);
+      const downloadURL = await getDownloadURL(snapshot.ref);
+      setProductImage(downloadURL);
+      setSelectedFileName(file.name);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
   };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -171,14 +184,15 @@ const ConsignmentForm = () => {
         </div>
 
         <div>
-          <label for="myfile">Product Image:</label>
+          <label htmlFor="myFile">Product Image:</label>
           <input
             type="file"
             id="myFile"
             name="myFile"
-            value={productImage}
             onChange={handleProductImageChange}
           />
+          
+          {selectedFileName && <div className="selected-file-name">Selected File: {selectedFileName}</div>}
           <input type="submit" value="Submit" className='Submit'></input>
         </div>
 
