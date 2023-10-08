@@ -78,6 +78,7 @@ function ProductListing() {
               <MDBox mb={3}>
                 <h2>{product.title}</h2>
                 <div style={productContainerStyle}>
+                  {/* Display the image using an <img> tag */}
                   <img
                     src={product.image}
                     alt={product.title}
