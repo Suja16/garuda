@@ -19,6 +19,14 @@ import Pod from "components/Pod";
 const routes = [
   {
     type: "collapse",
+    name: "Profile",
+    key: "profile",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/profile",
+    component: <Profile />,
+  },
+  {
+    type: "collapse",
     name: "Dashboard",
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
@@ -75,12 +83,13 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
-    component: <Profile />,
+    name: " Podcasts ",
+    key: "podcasts",
+    icon: <Icon fontSize="small">podcasts</Icon>,
+    route: "podcasts",
+    component: <Pod/>
   },
+<<<<<<< HEAD
 
   {
     type: "collapse",
@@ -90,6 +99,8 @@ const routes = [
     route: "podcasts",
     component: <Pod/>
   },
+=======
+>>>>>>> 0f76e56b7b45acc7d9f976f1d59a7b9c637c4e42
   {
     type: "collapse",
     name: "Contact Us",
@@ -98,7 +109,10 @@ const routes = [
     route: "contact-us",
     component: <ContactUs  />,
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f76e56b7b45acc7d9f976f1d59a7b9c637c4e42
   
 ];
 
