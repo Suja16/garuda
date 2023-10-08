@@ -52,11 +52,12 @@ function Dashboard() {
 
   <Paper elevation={3} style={{ flex: 1, padding: '16px', width: '60vw', borderRadius: '10px', display: 'flex', flexDirection: 'column', marginBottom: '16px' }}>
             
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h6" gutterBottom >
                 Welcome back
               </Typography>
               <Typography variant="body1" paragraph>
-                Dak Ghar Nirayat Kendra is your destination for excellence in postal services and comprehensive import-export solutions. Trust in our commitment to secure and efficient mail and package deliveries, along with streamlined global logistics, all underpinned by our unwavering dedication to sustainable practices.
+              Dak Ghar Nirayat Kendra is your destination for excellence in postal services and comprehensive import-export solutions.
+              Trust in our commitment to secure and efficient mail and package deliveries and streamlined global logistics underpinned by our unwavering dedication to sustainable practices.
               </Typography>
                     <div style={{ display: 'flex', justifyContent: 'center', margin: '16px' }}>
               <a href="https://dnk.cept.gov.in/customers.web/" target="_blank" rel="noopener noreferrer">
@@ -111,7 +112,7 @@ function Dashboard() {
           <ComplexStatisticsCard
             color="primary"
             icon="person_add"
-            title="review"
+            title="Review"
             count="1000"
             percentage={{
               color: "success",
@@ -126,7 +127,7 @@ function Dashboard() {
           <ComplexStatisticsCard
             color="dark"
             icon="weekend"
-            title="Pending-order"
+            title="Pending Orders"
             count={281}
             percentage={{
               color: "success",
