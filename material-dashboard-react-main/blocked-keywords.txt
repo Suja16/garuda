@@ -1,0 +1,1074 @@
+CATHINONE
+DOB
+BROLAMFETAMINE
+DET
+DMA
+DMHP
+DMT
+DOET
+ETICYCLIDINE
+PCE
+ETRYPTAMINE
+N-hydroxy MDA
+(+)-LYSERGIDE
+LSD, LSD-25
+MDE, N-ethyl MDA
+MDMA
+mescaline
+methcathinone
+4-methylaminorex
+MMDA
+4-MTA
+parahexyl
+PMA
+psilocine, psilotsin
+PSILOCYBINE
+ROLICYCLIDINE
+PHP
+PCPY
+STP
+DOM
+TENAMFETAMINE
+MDA
+TENOCYCLIDINE
+TCP
+TMA
+AMFETAMINE
+AMINEPTINE
+DEXAMFETAMINE
+DRONABINOLa
+FENETYLLINE
+LEVAMFETAMINE
+MECLOQUALONE
+METAMFETAMINE
+METAMFETAMINE RACEMATE
+METHAQUALONE
+METHYLPHENIDATE
+PHENCYCLIDINE
+amphetamine
+2C-B
+dexamphetamine
+delta-9-tetrahydro- cannabinol and its stereochemical variants
+levamphetamine
+levomethamphetamine
+methamphetamine
+methamphetamine racemate
+PCP
+PHENMETRAZINE
+SECOBARBITAL
+ZIPEPROL
+AMOBARBITAL
+BUPRENORPHINE
+BUTALBITAL
+CATHINE
+CYCLOBARBITAL
+FLUNITRAZEPAM
+GLUTETHIMIDE
+PENTAZOCINE
+PENTOBARBITAL
+(+)-norpseudoephedrine
+ALLOBARBITAL
+ALPRAZOLAM
+AMFEPRAMONE
+AMINOREX
+BARBITAL
+BENZFETAMINE
+BROMAZEPAM
+BROTIZOLAM
+CAMAZEPAM
+CHLORDIAZEPOXIDE
+CLOBAZAM
+CLONAZEPAM
+CLORAZEPATE
+CLOTIAZEPAM
+CLOXAZOLAM
+DELORAZEPAM
+DIAZEPAM
+ESTAZOLAM
+ETHCHLORVYNOL
+ETHINAMATE
+ETHYL LOFLAZEPATE
+ETILAMFETAMINE
+FENCAMFAMIN
+FENPROPOREX
+FLUDIAZEPAM
+FLURAZEPAM
+HALAZEPAM
+HALOXAZOLAM
+KETAZOLAM
+LEFETAMINE
+LOPRAZOLAM
+diethylpropion
+benzphetamine
+butobarbital
+N-ethylamphetamine
+GHB
+SPA
+LORAZEPAM	
+LORMETAZEPAM	
+MAZINDOL	
+MEDAZEPAM	
+MEFENOREX	
+MEPROBAMATE	
+MESOCARB	
+METHYLPHENOBARBITAL	
+METHYPRYLON	
+MIDAZOLAM	
+NIMETAZEPAM	
+NITRAZEPAM	
+NORDAZEPAM	
+OXAZEPAM	
+OXAZOLAM	
+PEMOLINE	
+PHENDIMETRAZINE	
+PHENOBARBITAL	
+PHENTERMINE	
+PINAZEPAM	
+PIPRADROL	
+PRAZEPAM	
+PYROVALERONE	
+SECBUTABARBITAL	
+TEMAZEPAM	
+TETRAZEPAM	
+TRIAZOLAM	
+VINYLBITAL	
+ZOLPIDEM	
+Allobarbital
+Amfepramone
+Amfetamine
+Amineptine
+Aminorex
+Amobarbital
+Barbital
+Benzfetamine
+Brolamfetamine (DOB)
+Buprenorphine
+Cathine
+Chlordiazepoxide
+Clorazepate
+Cyclobarbital
+DET
+Dexamfetamine
+Aminophenazone
+Glutamate
+Hydrochloride
+Resinate
+Acetylsalicylate
+Adipate
+Aspartate
+Bitartrate
+Hydrochloride
+Para-aminophencylacetate
+Parachlorophenoxyacetate
+Pentobarbiturate
+Phosphate (1 mol. base)
+Phosphate (2 mol. base) Resinate
+Sulfate (2 mol. base)
+Tannate
+Tartrate (2 mol. base)
+Hydrochloride
+Fumarate
+Resinate Sodium
+Calcium (2 mol. base)
+Magnesium (2 mol. base)
+Sodium
+Hydrochloride
+Hydrochloride
+Bitartrate
+Hydrochloride
+Sulfate (2 mol. base)
+Hydrochloride
+"Phenobarbiturate Resinate
+Sulfate (2 mol. base)"
+Dibunate
+Hydrochloride
+Dipotassium
+Monopotassium
+Calcium (2 mol. base)
+Hydrochloride
+Adipate
+Bitartrate
+Carboxymethylcellulose Hydrochloride
+Pentobarbiturate
+Phosphate (2 mol. base)
+Phosphate Resinate
+Saccharate
+Sulfate (2 mol. base)
+Tannate
+DMA
+DMT
+DOET
+Etilamfetamine
+Eticyclidine
+Etryptamine
+Fencamfamin
+Fenetylline
+Fenproporex
+Flurazepam
+gamma-hydroxybutyric acid
+Lefetamine (SPA)
+Levamfetamine
+Levomethamphetamine
+Loprazolam
+Lorazepam
+(+) Lysergide
+MDMA
+Mecloqualone
+Medazepam
+Mefenorex
+Mescaline
+Metamfetamine
+Methaqualone
+Methcathinone
+Methylphenidate
+Methylphenobarbital
+Midazolam
+MMDA
+Oxazepam
+Pemoline
+Pentazocine
+Pentobarbital
+Phencyclidine
+Phendimetrazine
+Phenmetrazine
+Phenobarbital
+Phentermine
+Pipradrol
+PMA
+Psilocine
+Psilocybine
+Pyrovalerone
+Secbutabarbital
+Secobarbital
+STP, DOM
+Tenamfetamine
+Tenocyclidine
+TMA
+Zipeprol
+Zolpidem
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Amfepramone	
+Benzfetamine	
+Bromazepam	
+Camazepam	
+Clorazepate	
+Clotiazepam	
+Cloxazolam	
+Delorazepam	
+Estazolam	
+Ethinamate	
+Ethyl loflazepate	
+Fludiazepam	
+Flunitrazepam	
+Haloxazolam	
+Ketazolam	
+Lefetamine (SPA)	
+Loprazolam	
+Lormetazepam	
+Mazindol	
+Medazepam	
+Methaqualone	
+Methyprylon	
+Nimetazepam	
+Oxazolam	
+Phendimetrazine	
+Phentermine	
+Pinazepam	
+Pipradrol	
+Prazepam	
+Temazepam	
+Tetrazepam	
+Acetorphine
+Acetyl-alpha-methylfentanyl
+Acetylmethadol
+Alfentanil
+Allylprodine
+Alphacetylmethadol
+Alphameprodine
+Alphamethadol
+Alpha-methylfentanyl
+Alpha-methylthiofentanyl
+Alphaprodine
+Anileridine
+Benzethidine
+Benzylmorphine
+Betacetylmethadol
+Beta-hydroxyfentanyl
+Beta-hydroxy-3-methylfentanyl
+Betameprodine
+Betamethadol
+Betaprodine
+Bezitramide
+Clonitazene
+Cocaine
+Codoxime
+Desomorphine
+Dextromoramide
+Diampromide
+Diethylthiambutene
+Difenoxin
+Dihydroetorphine
+Dihydromorphine
+Dimenoxadol
+Dimepheptanol
+Dimethylthiambutene
+Dioxaphetyl butyrate
+Diphenoxylate
+Dipipanone
+Drotebanol
+Ecgonine
+Ethylmethylthiambutene
+Etonitazene
+Etorphine
+Etoxeridine
+Fentanyl
+Furethidine
+Heroin
+Hydrocodone
+Hydromorphinol
+Hydromorphone
+Hydroxypethidine
+Isomethadone
+Ketobemidone
+Levomethorphan
+Levomoramide
+Levophenacylmorphan
+Levorphanol
+Metazocine
+Methadone
+Methadone intermediate
+Methyldesorphine
+Methyldihydromorphine
+3-methylfentanyl
+3-methylthiofentanyl
+Metopon
+Moramide intermediate
+Morpheridine
+Morphine
+MPPP
+Morphine-N-oxide
+Myrophine
+Nicomorphine
+Noracymethadol
+Norlevorphanol
+Normethadone
+Normorphine
+Norpipanone
+Opium
+Oxycodone
+Oxymorphone
+Para-fluorofentanyl
+PEPAP
+Pethidine
+Pethidine intermediate A
+Pethidine intermediate B
+Pethidine intermediate C
+Phenadoxone
+Phenampromide
+Phenazocine
+Phenomorphan
+Phenoperidine
+Piminodine
+Piritramide
+Proheptazine
+Properidine
+Racemethorphan
+Racemoramide
+Racemorphan
+Remifentanil
+Sufentanil
+Thebacon
+Thebaine
+Thiofentanyl
+Tilidine
+Trimeperidine
+Acetyldihydrocodeine
+Codeine
+Dextropropoxyphene
+Dihydrocodeine
+Ethylmorphine
+Nicocodine
+Nicodicodine
+Norcodeine
+Pholcodine
+Propiram
+Acetorphine
+Acetyl-alpha-methylfentanyl
+Alpha-methylfentanyl
+Alpha-methylthiofentanyl
+hydroxy-3-methylfentanyl
+Beta-hydroxyfentanyl
+Desomorphine
+Etorphine
+Heroin
+Ketobemidone
+3-methylfentanyl
+3-methylthiofentanyl
+Para -fluorofentanyl
+Thiofentanyl
+Abitran
+Acedicon
+Acetomorphine
+Acetyl-alpha-methylfentanyl
+Acetyldemethylodihydrothebaine
+Acetyldihydrocodeine
+Acetyldihydrocodeinone
+Acetylmethadol
+3-acetylmorphine	
+6-acetylmorphine
+Actiq
+Adanon
+Adibeta
+Adolan
+Adolens
+Afebralgo
+Aferin
+Afluol
+Alcioid
+Alfentanil
+Algafan
+Algantine
+Algedol
+Algeril
+Algidon
+Algiespas
+Algifene
+Algil
+Algolysin
+Algoxale
+Allay
+Allylprodine
+Alodan
+Alperidine
+Alpha-methylfentanyl	
+Alpha-methylthiofentanyl	
+Alphacetylmethadol	
+l-alphacetylmethadol	
+alphacetylmethadol
+Alphameprodine	
+Alphamethadol	
+Alphamin	
+Alphaprodine	
+Althro se	
+Alvodine	
+Amacodone	
+Ambenyl	
+Amidalgon	
+Amidiaz	
+Amidol	
+Amidone	
+Amidosan	
+Aminobutene	
+Amiorel	
+Amphosedal	
+Amtussin	
+Anakod	
+Analmorph	
+Anexsia	
+Anileridine	
+Anodynos
+Anolor DH5	
+Anopridine	
+Antidol	
+Antiduol	
+Antigrippine	
+Antispasmin	
+APC	
+Apex	
+Apodol	
+Apolo Morfina
+Arkodin	Codeine 
+Artifene	
+Artifene 
+Asekod	
+Aseptobron Unicap	
+Asmalina	
+Assicodid	
+Assilaudid	
+Astramorph PF	
+Atenorax	
+Atenos	
+Atuss MS	
+Azdone	
+Ban-Tuss	
+Bancap HC	
+Beatryl	Fentanyl
+Bellalgina	
+Bemidone	
+Benamine Expectorans	
+Benzethidine	
+Benzokodin	
+Benzylmorphine	
+Beta-hydroxy-3-methylfentanyl	
+Beta-hydroxyfentanyl	
+Betacetylmethadol	
+Betameprodine	
+Betamethadol	
+Betaprodine	
+Bezitramide	
+Biatos	
+Biocodone 
+Biohisdex DHC	
+Biohisdine DHC	
+Biomorphyl	
+Bionin	
+Bionone	
+Biphenal	  
+Bisolvon Compositum	
+Boncodal	
+Brevafen	
+Bromocod 	
+Bromocodeina	
+Bronchocodine	
+Bronchodin	
+Bronchofluid	
+Bronchol	
+Broncodid 	
+Broncoton	
+Bronquibasol	
+Brontuss	
+Bronchotussine	
+Brosol
+Burgodin
+Buscalginol
+Butalgin
+Caldomine DH
+Calmodid
+Calmydone
+Canovex
+Capros
+Carbetidine
+Cardanon
+Cardiasol Paracodina
+Cardiostenol
+Centrac
+Centralgine
+Centralgin
+Cerebrol
+Chalamonal
+Chem-Tuss
+Chlorgest-HD	
+Cimadon
+Cimex
+Citarin
+Citra
+Citra Forte
+Cleartuss
+Cliradon
+Clonitazene
+Cloro Nona
+Cloruro mórfico
+Co-Efferalgan
+Co-gesic
+Co Dafalgan	
+Coca base
+Coca leaf	
+Coca paste
+Cocaine
+Codal
+d-cocaine	
+Codamine
+Codan
+Codasel
+Codeigene
+Codeine
+Codeine-N-oxide
+Codeidol
+Codeinol
+Codeinon
+Codelasa
+Codenur	  
+Codephal	
+Codesona	
+Codetilina  	
+Codiclear	
+Codicontine 	
+Codidoxal	
+Codimal	
+Codinon	
+Codinovo	
+Codipront	
+Coditrate	
+Codol	
+Codone	
+Codoxime	
+Coedefen	
+Cofacodide	
+Colapsil	
+Coldeks	
+Comtussin HC	  	
+Contalgan	
+Contalgin	
+Contugesic	
+Cophylac	
+Corex	
+Coristex DH	
+Coristine DH	
+Cormorphin	
+Corutol	
+Cosil	
+Cotanal-65	
+Cotatate	
+Cotate DH	
+Cotuss-V	
+Coveral	
+Curadol	
+Cyclimorph	
+Cymidon	
+Cyndal	
+Cytuss
+Dafalgan 	
+Dalmacol	
+Damason-P	
+Darvon	
+Deatussan	
+Defrol	
+Dekzofen	
+Demer-Idine	
+Demerol	
+Dephedrine	
+Deprancol
+Depridol	 
+Depronal  	 
+Deptadol	 
+Desinflam Compuesto  
+Desomorphine	 
+Desone	 
+Detussin 
+Devasko	Codeine
+Develin AS	
+Develin retard	
+Dexprofeno	
+Dextromoramide	
+Dextropropoxyphene	
+DF118	
+DHC	
+Diacetylmorphine	
+Diaminon	
+Diamorphine	
+Diampromide	
+Dianone	Methadone
+Diaphorm	
+Diatab	
+Dicodid	
+Dicodinon	
+Dicomal DH	
+Diconal	Dipipanone
+Diconone	
+Dicotrate	
+Dicton	Codeine
+Didor Continus	
+Didrate	Hydrocodone
+Diethibutin	
+Diethyliambutene	
+Diethylthiambutene	
+Difenoxin	
+Difenoxylic acid	
+Dihydrocodeine	
+Dihydrocodeinone	
+Dihydrodesoxymorphine	
+Dihydroetorphine	
+Dihydrohydroxycodeinone	
+Dihydromorphine	
+Dihydromorphinone	
+Dihydrone	
+Diidrodin	
+Dilaudid	
+Dilaudid-5	
+Dilaudid-Atropin	
+Dilaudid-HP	
+Dimenoxadol	
+Dimepheprimine	
+Dimepheptanol	
+Dimetane	
+Dimethibutin
+Dimethylthiambutene	
+Dimorlin	
+Dimorphid	
+Dimorphinon	
+Dimorphone	
+Dinacode N	
+Dinarkon	
+Dinicotinyl morphine	
+Dinofor	
+Diocalm	
+Dioctin	
+Dionin	
+Dionina	
+Dioxaphetyl butyrate	
+Diphenoxylate	
+Diphenoxyle	
+Dipidolor	
+Dipipanone	
+Disifelit	
+Disipan	Methadone
+Disket	Methadone
+Dispadol	
+Distalgesic	
+DM 4	
+DM 8	
+Dodonal	
+Dol	
+Dolacet	
+Doladamon
+Doladoman P	
+Dolafin	
+Dolamid	
+Dolamina	
+Dolanquifa	
+Dolantal	
+Dolantin/a	
+Dolantine	
+Dolantol	
+Dolaremil	
+Dolargan	
+Dolarin	Pethidine
+Dolatol	Pethidine
+Dolcontin	
+Dolcontral	
+Dolcsona	
+Dolenal	Pethidine
+Dolestine Pethidine
+Doleval	Pethidine
+Dolin	Pethidine
+Dolinal	Pethidine
+Dolind	Morphine
+Dolisan	Pethidine
+Dolisina	
+Dolisina "B"	
+Dolmed	Methadone
+Dolo Prolixan	
+Dolocalm	Pethidine
+Dolodorin	Oxycodone
+Dolofrix	Codeine
+Doloheptan	Methadone
+Doloneurin	Pethidine
+Dolopethin	Pethidine
+Dolophine	Methadone
+Dolopyrine	Codeine
+Dolor	Pethidine
+Dolorex	Methadone
+Doloridine	Pethidine
+Dolormin	Pethidine
+Dolosal	Pethidine
+Doloscopin	Dextropropoxyphene
+Dolosil	Pethidine
+Dolotard	Dextropropoxyphene
+Doloksen	Dextropropoxyphene
+Doloxene	Dextropropoxyphene
+Dolphen	Hydrocodone
+Dolsin	Pethidine
+Doltard	Morphine
+Dolvanol	Pethidine
+Dolviran	Codeine
+Donatussin	Hydrocodone
+Donopen	Fentanyl
+Dorexol	Methadone
+Dorlise	Tilidine
+Dosicodid	Hydrocodone
+Dosilantine	Pethidine
+DP1	Codeine
+Dromoran	Levorphanol
+Drotebanol	see page 4
+DTF	Methadone
+Duocet	Hydrocodone
+Duodin	Hydrocodone
+Duradal HD	Hydrocodone
+Duradyne	Hydrocodone
+Duragesic	Fentanyl
+Duralmol L.P.	Morphine
+Duramorph	Morphine
+Duratuss	Hydrocodone
+Durogesic	Fentanyl
+Durogesic TTS
+Ecgonine	see page 4
+Eclorion	Heroin
+ED TLC	Hydrocodone
+ED Tuss HC	Hydrocodone
+Efeko	Codeine
+Efetal	Codeine
+Efferalgan Codeina	Codeine
+Emedrine	Opium
+Emethibutin
+Emexel	Morphine
+Endagen HD	Hydrocodone
+Endal	Hydrocodone
+Endal-HD	Hydrocodone
+Endocet	Oxycodone
+Endodan	Oxycodone
+Endone	Oxycodone
+Enplus-HD	Hydrocodone
+Entuss	Hydrocodone
+Entuss-D	Hydrocodone
+Epidosan Compuesto	Codeine
+Epimorph	Morphine
+Eptadone	Methadone
+Equimorphine	Oxycodone
+Errecalma	Dextromoramide
+Escofedal	Oxycodone
+Escotussine	Dihydrocodeine
+Espasmo-Cibalena Fuerte	Codeine
+Espectocural	Codeine
+Ethylmethiambutene	Ethylmethylthiambutene
+Ethylmethylthiambutene	see page 4
+Ethylmorphine	see page 6
+Etonitazene	see page 4
+Etopedolum	Etonitazene
+Etopalin	Etonitazene
+Etorphine	see page 4 and 6
+Etoxeridine	see page 4
+Etoxiscerol	Etoxeridine
+Eubine	Oxycodone
+Eucodal	Oxycodone
+Eucodalum	Oxycodone
+Eucodamine	Oxycodone
+Eucon	Normethadone
+Eucopon	Normethadone
+Eucosan	Oxycodone
+Eudin	Oxycodone
+Eudol	Oxycodone
+Eudolak	Pethidine
+Eukdin	Oxycodone
+Eukodal	Oxycodone
+Eumorphal	Oxycodone
+Euphon N	Codeine
+Expectico	Hydrocodone
+Expectosan	Codeine
+Exo-Tuss	Hydrocodone
+Extussin
+Fabra 004	Fentanyl
+Famel	Codeine
+Fanaxal	Alfentanil
+Farmebron Compuesto	Codeine
+FDS Aspirin	Methadone
+Feldin
+Felidin	Pethidine
+Fenadone	Methadone
+Fenatsokin	Phenazocine
+Fenekodin	Codeine & Ethylmorphine
+Fenergan	Codeine
+Fenpidon	Dipipapone
+Fentaderm	Fentanyl
+Fentahexal	Fentanyl
+Fentaject	Fentanyl
+Fentalim	Alfentanil
+Fentamorf	Sufentanil
+Fentamorf Forte	Sufentanil
+Fentanest	Fentanyl
+Fentanil/o	Fentanyl
+Fentanyl	see page 4
+Fentastad	Fentanyl
+Fentatienil	Sufentanil
+Fentatienil Forte	Sufentanil
+Fentax	Fentanyl
+Fentuss	Hydrocodone
+Fitotos	Codeine
+p-fluorofentanyl	Para -flurofentanyl
+Foral	Codeine
+Fulpen	Codeine
+Furethidine	see page 4
+Furex
+Gayakodin	Codeine
+Gelonida	Codeine
+Gencodin Tuss	Hydrocodone
+Genomorphine	Morphine-N-oxide
+Geralgine K	Codeine
+Gesic 5	Hydrocodone
+Gevelina	Properidine
+Gratidina	Pethidine
+Gripkill	Ethylmorphine
+Guiaphen HD
+Haldid	Fentanyl
+Hederix Plan	Codeine
+Hepagin	Phenadoxone
+Heptadol	Methadone
+Heptadon	Methadone
+Heptalgin	Phenadoxone
+Heptalin	Phenadoxone
+Heptanal	Methadone
+Heptanon
