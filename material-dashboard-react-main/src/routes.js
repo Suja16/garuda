@@ -81,14 +81,7 @@ const routes = [
     route: "/profile",
     component: <Profile />,
   },
-  {
-    type: "collapse",
-    name: "Contact Us",
-    key: "contact-us",
-    icon: <Icon fontSize="small">call-support</Icon>,
-    route: "contact-us",
-    component: <ContactUs  />,
-  },
+
   {
     type: "collapse",
     name: " Podcasts ",
@@ -96,6 +89,14 @@ const routes = [
     icon: <Icon fontSize="small">podcasts</Icon>,
     route: "podcasts",
     component: <Pod/>
+  },
+  {
+    type: "collapse",
+    name: "Contact Us",
+    key: "contact-us",
+    icon: <Icon fontSize="small">call-support</Icon>,
+    route: "contact-us",
+    component: <ContactUs  />,
   },
 
   
