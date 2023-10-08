@@ -89,18 +89,6 @@ const routes = [
     route: "podcasts",
     component: <Pod/>
   },
-<<<<<<< HEAD
-
-  {
-    type: "collapse",
-    name: " Podcasts ",
-    key: "podcasts",
-    icon: <Icon fontSize="small">podcasts</Icon>,
-    route: "podcasts",
-    component: <Pod/>
-  },
-=======
->>>>>>> 0f76e56b7b45acc7d9f976f1d59a7b9c637c4e42
   {
     type: "collapse",
     name: "Contact Us",
@@ -109,10 +97,6 @@ const routes = [
     route: "contact-us",
     component: <ContactUs  />,
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> 0f76e56b7b45acc7d9f976f1d59a7b9c637c4e42
   
 ];
 
