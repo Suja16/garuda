@@ -80,7 +80,7 @@ const ConsignmentForm = () => {
 
 
   
-    // Check if the description contains blocked keywords
+    
     const containsBlockedKeyword = blockedKeywords.some((keyword) =>
       productDescription.toLowerCase().includes(keyword.trim().toLowerCase())
     );
@@ -88,7 +88,7 @@ const ConsignmentForm = () => {
     if (containsBlockedKeyword) {
       setErrorMessage('Contains Blocked Keyword. Please make sure you are trying to sell a product that is allowed.');
     } else {
-      // Create a data object with the form values
+      
       const productData = {
         title: productTitle,
         sku: productSKU,
@@ -100,12 +100,12 @@ const ConsignmentForm = () => {
       };
   
       try {
-        // Add the productData to Firestore
+      
         const docRef = await addDoc(collection(firestore, 'products'), productData);
         console.log('Document written with ID: ', docRef.id);
         setProductAdded(true);
   
-        // Clear the form fields and error message
+        
         setProductTitle('');
         setProductSKU('');
         setProductDescription('');
@@ -185,7 +185,7 @@ const ConsignmentForm = () => {
         {productAdded && <div className="success-message">Product Added Successfully</div>}
 
 
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && <div className="banning-message">{errorMessage}</div>}
       </form>
     </MDBox>
   );
