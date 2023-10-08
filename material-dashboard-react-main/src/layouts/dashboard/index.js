@@ -47,18 +47,18 @@ function Dashboard() {
           <img src={imgSrc} alt="Narendra MOdi-PM India" style={{ width: '100%', height: '270px', borderRadius: '10px',}} />
         </MDBox>
         </Grid>
-                <Grid item xs={12} md={6} lg={3}>
-          <Paper elevation={3} style={{ padding: '16px', width: '100%', height: '50%', borderRadius: '10px', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ flex: 1, overflowY: 'scroll' }}>
-              {/* Scrollable content */}
+        <Grid item xs={12} md={6} lg={3} style={{ display: 'flex', flexDirection: 'column',justifyItems:'space-around',justifyContent:'space-around' }}>
+        <MDBox py={3}>
+
+  <Paper elevation={3} style={{ flex: 1, padding: '16px', width: '60vw', borderRadius: '10px', display: 'flex', flexDirection: 'column', marginBottom: '16px' }}>
+            
               <Typography variant="h6" gutterBottom>
                 Welcome back
               </Typography>
               <Typography variant="body1" paragraph>
                 Dak Ghar Nirayat Kendra is your destination for excellence in postal services and comprehensive import-export solutions. Trust in our commitment to secure and efficient mail and package deliveries, along with streamlined global logistics, all underpinned by our unwavering dedication to sustainable practices.
               </Typography>
-            </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '16px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', margin: '16px' }}>
               <a href="https://dnk.cept.gov.in/customers.web/" target="_blank" rel="noopener noreferrer">
               <Button variant="contained" color="primary" style={{ color: 'white' }}>
                   Learn More
@@ -66,6 +66,7 @@ function Dashboard() {
               </a>
             </div>
           </Paper>
+          </MDBox>
         </Grid>
 
         <Grid container spacing={3}>
