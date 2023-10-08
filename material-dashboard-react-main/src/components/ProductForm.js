@@ -27,6 +27,8 @@ const ConsignmentForm = () => {
   const [productCategory, setProductCategory] = useState('');
   const [productImage, setProductImage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [productAdded, setProductAdded] = useState(false);
+
   /* const [blockedKeywords, setBlockedKeywords] = useState([]); */
 
 /*   useEffect(() => {
@@ -75,6 +77,8 @@ const ConsignmentForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+
   
     // Check if the description contains blocked keywords
     const containsBlockedKeyword = blockedKeywords.some((keyword) =>
@@ -99,6 +103,7 @@ const ConsignmentForm = () => {
         // Add the productData to Firestore
         const docRef = await addDoc(collection(firestore, 'products'), productData);
         console.log('Document written with ID: ', docRef.id);
+        setProductAdded(true);
   
         // Clear the form fields and error message
         setProductTitle('');
@@ -124,6 +129,7 @@ const ConsignmentForm = () => {
           <label>Product Title:</label>
           <input type="text" value={productTitle} onChange={handleProductTitleChange} />
         </div>
+
 
         <div className='prod-form-field'>
           <label>Product SKU:</label>
@@ -158,8 +164,8 @@ const ConsignmentForm = () => {
           <label>Product Category:</label>
           <select value={productCategory} onChange={handleProductCategoryChange}>
             <option value="">Select Product Category</option>
-            <option value="Category 1">Ceramics</option>
-            <option value="Category 2">Jewellery</option>
+            <option value="Ceramics">Ceramics</option>
+            <option value="Jewellery">Jewellery</option>
            
           </select>
         </div>
@@ -175,6 +181,9 @@ const ConsignmentForm = () => {
           />
           <input type="submit" value="Submit" className='Submit'></input>
         </div>
+
+        {productAdded && <div className="success-message">Product Added Successfully</div>}
+
 
         {errorMessage && <p>{errorMessage}</p>}
       </form>
