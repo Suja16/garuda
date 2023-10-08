@@ -47,7 +47,7 @@ function Transactions() {
         >
           <Transaction
             color="success"
-            icon="expand_more"
+            icon="expand_less"
             name="Kasmiri Mats"
             description="27 March 2020, at 12:30 PM"
             value="+ ₹2,500"

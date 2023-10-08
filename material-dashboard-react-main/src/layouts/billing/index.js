@@ -32,24 +32,26 @@ function Billing() {
             <Grid item xs={12} lg={4}>
               <Invoices />
             </Grid>
-          </Grid>
-        </MDBox>
-        <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
+            <Grid item xs={12} md={8}>
+              {/* <MDBox mb={3}> */}
                 <ReportsLineChart
-                  color="dark"
+                  color="info"
                   title="overall growth"
                   description="total earning in the platform per month"
                   date="just updated"
                   chart={tasks}
                 />
-              </MDBox>
-            </Grid>
+              {/* </MDBox> */}
+        </Grid>
+          </Grid>
+        </MDBox>
+        
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={7}>
               <BillingInformation />
             </Grid>
+            
             <Grid item xs={12} md={5}>
               <Transactions />
             </Grid>

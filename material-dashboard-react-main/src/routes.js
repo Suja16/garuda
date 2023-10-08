@@ -12,6 +12,7 @@ import Icon from "@mui/material/Icon";
 import { ContactPhone, Podcasts } from "@mui/icons-material";
 import ProductForm from "components/ProductForm";
 import KYCForm from "components/KYCForm";
+import ContactUs from "components/ContactUs";
 
 const routes = [
   {
@@ -43,7 +44,8 @@ const routes = [
     name: " Product Listed ",
     key: "product-listed",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "",
+    route: "product-listed",
+    
   },
   {
     type: "collapse",
@@ -82,8 +84,8 @@ const routes = [
     name: "Contact Us",
     key: "contact-us",
     icon: <Icon fontSize="small">call-support</Icon>,
-    route: "",
-    component: <ContactPhone  />,
+    route: "contact-us",
+    component: <ContactUs  />,
   },
   {
     type: "collapse",
