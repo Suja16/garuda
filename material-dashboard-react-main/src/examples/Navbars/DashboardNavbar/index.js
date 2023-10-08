@@ -91,8 +91,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <NotificationItem icon={<Icon>receipt receipt_long</Icon>} title="Queries"/>
-      {/* <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" /> */}
+      <a href="">
+        <NotificationItem icon={<Icon>receipt receipt_long</Icon>} title="Queries"/>
+      </a>
       <NotificationItem icon={<Icon>email</Icon>} title="Seller-Buyer Interface" />
     </Menu>
   );
