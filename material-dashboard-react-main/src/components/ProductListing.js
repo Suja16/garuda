@@ -7,13 +7,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, collection } from 'firebase/firestore'; 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB_k8huWepobUHQs2WqlCUI8Lh514MS7D8",
-  authDomain: "garuda-d278e.firebaseapp.com",
-  projectId: "garuda-d278e",
-  storageBucket: "garuda-d278e.appspot.com",
-  messagingSenderId: "47109051213",
-  appId: "1:47109051213:web:958dc62e04eed168319d04",
-  measurementId: "G-6MM30DX7TV"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
