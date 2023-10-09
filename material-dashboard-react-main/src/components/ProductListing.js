@@ -4,7 +4,7 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, collection } from 'firebase/firestore'; 
+import { getFirestore, getDocs, collection, doc, updateDoc } from 'firebase/firestore'; 
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -49,24 +49,50 @@ const sectionTextStyle = {
 
 function ProductListing() {
   const [products, setProducts] = useState([]); 
+  const [editMode, setEditMode] = useState({});
+  const [editedValues, setEditedValues] = useState({});
 
-  
   const fetchProducts = async () => {
-   
     const querySnapshot = await getDocs(collection(firestore, 'products'));
     const productData = [];
     
     querySnapshot.forEach((doc) => {
-      productData.push(doc.data());
+      productData.push({ ...doc.data(), id: doc.id });
+      setEditMode({ ...editMode, [doc.id]: false });
+      setEditedValues({ ...editedValues, [doc.id]: {} });
     });
 
     setProducts(productData);
   };
 
   useEffect(() => {
-  
     fetchProducts();
   }, []);
+
+  const handleEdit = (id) => {
+    setEditMode({ ...editMode, [id]: true });
+    setEditedValues({ ...editedValues, [id]: products.find(product => product.id === id) });
+  };
+
+  const handleSave = async (id) => {
+    try {
+      // Update Firestore document with the edited values
+      await updateDoc(doc(firestore, 'products', id), editedValues[id]);
+      setEditMode({ ...editMode, [id]: false });
+    } catch (error) {
+      console.error('Error updating document: ', error);
+    }
+  };
+
+  const handleChange = (id, field, value) => {
+    setEditedValues({ 
+      ...editedValues, 
+      [id]: { 
+        ...editedValues[id], 
+        [field]: value 
+      } 
+    });
+  };
 
   return (
     <DashboardLayout>
@@ -78,7 +104,6 @@ function ProductListing() {
               <MDBox mb={3}>
                 <h2>{product.title}</h2>
                 <div style={productContainerStyle}>
-                  {/* Display the image using an <img> tag */}
                   <img
                     src={product.image}
                     alt={product.title}
@@ -88,13 +113,49 @@ function ProductListing() {
                     <p style={sectionTextStyle}>
                       <strong>Product Description:</strong> {product.description}
                       <br />
-                      <strong>Product MRP:</strong> {product.mrp}
+                      <strong>Product MRP:</strong> {editMode[product.id] ? (
+                        <input
+                          type="text"
+                          value={editedValues[product.id]?.mrp || product.mrp}
+                          onChange={(e) => handleChange(product.id, 'mrp', e.target.value)}
+                        />
+                      ) : (
+                        product.mrp
+                      )}
                       <br />
-                      <strong>Product Selling Price:</strong> {product.sp}
+                      <strong>Product Selling Price:</strong> {editMode[product.id] ? (
+                        <input
+                          type="text"
+                          value={editedValues[product.id]?.sp || product.sp}
+                          onChange={(e) => handleChange(product.id, 'sp', e.target.value)}
+                        />
+                      ) : (
+                        product.sp
+                      )}
+                      <br />
+                      <strong>Product Stock:</strong> {editMode[product.id] ? (
+                        <input
+                          type="text"
+                          value={editedValues[product.id]?.Stock || product.Stock}
+                          onChange={(e) => handleChange(product.id, 'Stock', e.target.value)}
+                        />
+                      ) : (
+                        product.Stock
+                      )}
                       <br />
                       <strong>Product Category:</strong> {product.category}
                       <br />
                       <strong>Product SKU:</strong> {product.sku}
+                      <br />
+                      {editMode[product.id] ? (
+                        <button onClick={() => handleSave(product.id)}>
+                          Save
+                        </button>
+                      ) : (
+                        <button onClick={() => handleEdit(product.id)}>
+                          Quick Edit
+                        </button>
+                      )}
                     </p>
                   </div>
                 </div>

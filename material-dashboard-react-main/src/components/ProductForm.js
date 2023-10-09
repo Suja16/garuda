@@ -26,6 +26,7 @@ const ConsignmentForm = () => {
   const [productMRP, setProductMRP] = useState('');
   const [productSP, setProductSP] = useState('');
   const [productCategory, setProductCategory] = useState('');
+  const [ProductStock, setProductStock] = useState('');
   const [productImage, setProductImage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [productAdded, setProductAdded] = useState(false);
@@ -72,6 +73,9 @@ const ConsignmentForm = () => {
   const handleProductCategoryChange = (event) => {
     setProductCategory(event.target.value);
   };
+  const handleProductStockChange = (event) =>{
+    setProductStock(event.target.value);
+  }
 
   const handleProductImageChange = async (event) => {
     const file = event.target.files[0];
@@ -109,6 +113,7 @@ const ConsignmentForm = () => {
         mrp: productMRP,
         sp: productSP,
         category: productCategory,
+        stock: ProductStock,
         image: productImage,
       };
   
@@ -123,6 +128,7 @@ const ConsignmentForm = () => {
         setProductSKU('');
         setProductDescription('');
         setProductMRP('');
+        setProductStock('');
         setProductSP('');
         setProductCategory('');
         setProductImage('');
@@ -171,6 +177,11 @@ const ConsignmentForm = () => {
         <div className='prod-form-field'>
           <label>Product Selling Price:</label>
           <input type="text" value={productSP} onChange={handleProductSPChange} />
+        </div>
+
+        <div className='prod-form-field'>
+          <label>Product Stock:</label>
+          <input type="text" value={ProductStock} onChange={handleProductSKUChange} />
         </div>
 
         <div className='prod-form-field'>
