@@ -14,6 +14,7 @@ import ProductForm from "components/ProductForm";
 import KYCForm from "components/KYCForm";
 import ContactUs from "components/ContactUs";
 import ProductListing from "components/ProductListing";
+import EditProduct  from "components/Edit-Product";
 import Pod from "components/Pod";
 
 const routes = [
@@ -96,6 +97,14 @@ const routes = [
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "contact-us",
     component: <ContactUs  />,
+  },
+  {
+    type: "collapse",
+    name: "Edit Product",
+    key: "Edit-Product",
+    icon: <Icon fontSize="small">call-support</Icon>,
+    route: "edit-product",
+    component: <EditProduct  />,
   },
   
 ];
