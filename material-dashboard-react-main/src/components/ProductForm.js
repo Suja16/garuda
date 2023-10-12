@@ -189,7 +189,20 @@ const ConsignmentForm = () => {
           <select value={productCategory} onChange={handleProductCategoryChange}>
             <option value="">Select Product Category</option>
             <option value="Ceramics">Ceramics</option>
-            <option value="Jewellery">Jewellery</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing & Fashion">Clothing & Fashion</option>
+            <option value="Home & Furniture">Home & Furniture</option>
+            <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Jewelry & Watches">Jewelry & Watches</option>
+            <option value="Sports & Outdoors">Sports & Outdoors</option>
+            <option value="Toys & Games">Toys & Games</option>
+            <option value="Books & Media">Books & Media</option>
+            <option value="Pet Supplies">Pet Supplies</option>
+            <option value="Office & School Supplies">Office & School Supplies</option>
+            <option value="Gardening & Outdoor">Gardening & Outdoor</option>
+            <option value="Electronics Accessories">Electronics Accessories</option>
+            <option value="Specialty Stores">Specialty Stores</option>
            
           </select>
         </div>
