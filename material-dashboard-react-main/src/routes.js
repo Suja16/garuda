@@ -98,14 +98,7 @@ const routes = [
     route: "contact-us",
     component: <ContactUs  />,
   },
-  {
-    type: "collapse",
-    name: "Edit Product",
-    key: "Edit-Product",
-    icon: <Icon fontSize="small">call-support</Icon>,
-    route: "edit-product",
-    component: <EditProduct  />,
-  },
+
   
 ];
 
