@@ -4,7 +4,8 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, collection, doc, updateDoc } from 'firebase/firestore'; 
+import { getFirestore, getDocs, collection, doc, updateDoc } from 'firebase/firestore';
+import LongMenu from "./Menu/HeightMenu";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -93,7 +94,7 @@ function ProductListing() {
       } 
     });
   };
-
+  
   return (
     <DashboardLayout>
       <DashboardNavbar absolute isMini />
@@ -157,6 +158,7 @@ function ProductListing() {
                         </button>
                       )}
                     </p>
+                    <LongMenu />
                   </div>
                 </div>
               </MDBox>
@@ -167,5 +169,4 @@ function ProductListing() {
     </DashboardLayout>
   );
 }
-
 export default ProductListing;
