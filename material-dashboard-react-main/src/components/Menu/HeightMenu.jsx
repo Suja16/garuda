@@ -4,22 +4,12 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Height } from '@mui/icons-material';
+import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
+
 
 const options = [
-  'None',
-  'Atria',
-  'Callisto',
-  'Dione',
-  'Ganymede',
-  'Hangouts Call',
-  'Luna',
-  'Oberon',
-  'Phobos',
-  'Pyxis',
-  'Sedna',
-  'Titania',
-  'Triton',
-  'Umbriel',
+  <Button variant="text">Delete</Button>
 ];
 
 const ITEM_HEIGHT = 48;
@@ -61,11 +51,14 @@ export default function LongMenu() {
           },
         }}
       >
-        {options.map((option) => (
+        
+         {options.map((option) => (
           <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
             {option}
           </MenuItem>
         ))}
+         
+     
       </Menu>
     </div>
   );
