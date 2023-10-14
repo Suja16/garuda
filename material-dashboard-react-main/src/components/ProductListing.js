@@ -77,7 +77,6 @@ function ProductListing() {
 
   const handleSave = async (id) => {
     try {
-      // Update Firestore document with the edited values
       await updateDoc(doc(firestore, 'products', id), editedValues[id]);
       setEditMode({ ...editMode, [id]: false });
     } catch (error) {
