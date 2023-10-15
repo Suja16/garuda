@@ -1,28 +1,33 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Height } from '@mui/icons-material';
-import { useHistory } from 'react-router-dom';
-import Button from '@mui/material/Button';
-
-
-const options = [
-  <Button variant="text">Delete</Button>
-];
+import EditProduct from 'components/Edit-Product';
 
 const ITEM_HEIGHT = 48;
 
 export default function LongMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const edit = [
+    {
+      type: "collapse",
+      name: "edit",
+      key: "Edit-Product",
+      route: "Edit-Product",
+      component: <EditProduct  />,
+    },
+  ];
 
   return (
     <div>
@@ -51,14 +56,12 @@ export default function LongMenu() {
           },
         }}
       >
-        
-         {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option}
+        <MenuItem onClick={handleClose}>Delete</MenuItem>
+        {edit.map((option) => (
+          <MenuItem key={option.key} onClick={handleClose}>
+            {option.name}
           </MenuItem>
         ))}
-         
-     
       </Menu>
     </div>
   );

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import MDBox from "components/MDBox";
+import { Box, TextField, Button, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 import './KYCForm.css';
-
-
+import theme from "assets/theme";
 
 
 const KYCForm = () => {
- 
+  // State variables
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [mobileNo, setMobileNo] = useState('');
@@ -17,8 +17,7 @@ const KYCForm = () => {
   const [date, setDate] = useState('');
   const [uploadDoc, setUploadDoc] = useState('');
 
-  
-
+  // Event handlers
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -55,97 +54,102 @@ const KYCForm = () => {
     setUploadDoc(event.target.value);
   };
 
-  
-
   return (
-    <MDBox py={3}>
+    <ThemeProvider theme={theme}>
+      <Box py={3}>
+        <div className="kyc-form">
+          <h1> KYC Registration</h1>
 
-    <body className="kyc-form">
-      
+          <div className='prod-form-field'>
+            <TextField
+              label="Username"
+              value={username}
+              onChange={handleUsernameChange}
+            />
+          </div>
 
-      <h1> KYC Registration</h1>
+          <div className='prod-form-field'>
+            <TextField
+              label="Password"
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
 
-      <div className='prod-form-field'>
-        <label>Username:</label>
-        <input type="username" value={username} onChange={handleUsernameChange} />
-      </div>
+          <div className='prod-form-field'>
+            <TextField
+              label="Mobile no"
+              type="tel"
+              value={mobileNo}
+              onChange={handleMobileNoChange}
+            />
+          </div>
 
-      <div className='prod-form-field'>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={handlePasswordChange} />
-      </div>
+          <div className='prod-form-field'>
+            <TextField
+              label="Address"
+              multiline
+              rows={4}
+              placeholder="Enter address"
+              value={address}
+              onChange={handleAddressChange}
+            />
+          </div>
 
-      <div className='prod-form-field'>
-        <label>Mobile no:</label>
-        <input type="tel" value={mobileNo} onChange={handleMobileNoChange} />
-      </div>
+          <div className='prod-form-field docs'>
+            <FormControl>
+              <InputLabel>Select KYC Document</InputLabel>
+              <Select
+                value={docSelect}
+                onChange={handleDocSelectChange}
+              >
+                <MenuItem value="">Select KYC Document</MenuItem>
+                <MenuItem value="Category 1">Import Export Code (IEC)</MenuItem>
+                <MenuItem value="Category 2">AD Code</MenuItem>
+                <MenuItem value="Category 3">GSTIN</MenuItem>
+                <MenuItem value="Category 4">Others</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
 
-      <div className='prod-form-field'>
-        <label >Address:</label>
-        <textarea id="Address" placeholder="Enter address"type="text" value={address} onChange={handleAddressChange} className='address' />
-      </div>
+          <div className='prod-form-field'>
+            <TextField
+              label="Document Code"
+              value={documentCode}
+              onChange={handleDocumentCodeChange}
+            />
+          </div>
 
-      {/* <div className='prod-form-field mrp'>
-        <div>
-        <label>GSTIN:</label>
-        <input type="text" value={productMRP} onChange={handleProductMRPChange} />
-        </div> */}
+          <div className='prod-form-field'>
+            <TextField
+              label="Document Issued By"
+              value={docIssue}
+              onChange={handleDocIssueChange}
+            />
+          </div>
 
-        <div className='prod-form-field docs'>
-        <label>Select KYC Document:</label>
-        <select value={docSelect} onChange={handleDocSelectChange}>
-          <option value="">Select KYC Document</option>
-          <option value="Category 1">Import Export Code (IEC)</option>
-          <option value="Category 2">AD Code</option>
-          <option value="Category 2">GSTIN</option>
-          <option value="Category 2">Others</option>
-        </select>
-      </div> 
+          <div className='prod-form-field'>
+            <TextField
+              label="Date of issue"
+              type="date"
+              value={date}
+              onChange={handleDateChange}
+            />
+          </div>
 
-      <div className='prod-form-field'>
-        <label>Document Code:</label>
-        <input type="text" value={documentCode} onChange={handleDocumentCodeChange} />
-      </div>
+          <div>
+            <InputLabel>Upload Document</InputLabel>
+            <input type="file" id="myFile" name="myFile" className='up-docs' value={uploadDoc} onChange={handleUploadDocChange} />
+          </div>
 
-      <div className='prod-form-field'>
-        <label>Document Issued By:</label>
-        <input type="text" value={docIssue} onChange={handleDocIssueChange} />
-      </div>
-
-      <div className='prod-form-field'>
-        <label for="issue-date">Date of issue:</label>
-        <input type="date" id="issue-date" className='date' value={date} onChange={handleDateChange} />
-      </div>
-
-      {/* <div className='prod-form-field'>
-        <label>Product Category:</label>
-        <select value={productCategory} onChange={handleProductCategoryChange}>
-          <option value="">Select Product Category</option>
-          <option value="Category 1">Category 1</option>
-          <option value="Category 2">Category 2</option>
-          <option value="Category 2">Category 3</option>
-          <option value="Category 2">Category 4</option>
-          <option value="Category 2">Category 5</option>
-          <option value="Category 2">Category 6</option>
-          <option value="Category 2">Category 7</option>
-          <option value="Category 2">Category 8</option>
-          <option value="Category 2">Category 9</option>
-          <option value="Category 2">Category 10</option>
-        </select>
-      </div> */}
-
-      <div>
-        <label for="myfile">Upload Document:</label>
-        <input type="file" id="myFile" name="myFile" className='up-docs' value={uploadDoc} onChange={handleUploadDocChange} />
-      </div>
-
-      <div>
-      <input type="submit" value="Submit" className='Submit'></input>
-      </div>
-    </body>
-    </MDBox>
+          <div>
+            <Button variant="contained" color="primary">Submit</Button>
+          </div>
+        </div>
+      </Box>
+    </ThemeProvider>
   );
 };
 
 export default KYCForm;
-

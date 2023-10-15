@@ -98,7 +98,6 @@ const routes = [
     route: "contact-us",
     component: <ContactUs  />,
   },
-
   
 ];
 
