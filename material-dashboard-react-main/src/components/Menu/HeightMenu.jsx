@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate, Link } from 'react-router-dom'; 
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import EditProduct from 'components/Edit-Product';
+import EditProduct from 'components/Edit-Product'; 
+
+
+/* const navigate = useNavigate(); */
 
 const ITEM_HEIGHT = 48;
 
 export default function LongMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const history = useLocation(); 
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -19,15 +24,9 @@ export default function LongMenu() {
     setAnchorEl(null);
   };
 
-  const edit = [
-    {
-      type: "collapse",
-      name: "edit",
-      key: "Edit-Product",
-      route: "Edit-Product",
-      component: <EditProduct  />,
-    },
-  ];
+  const handleEditClick = () => {
+    handleClose(); 
+  };
 
   return (
     <div>
@@ -57,11 +56,7 @@ export default function LongMenu() {
         }}
       >
         <MenuItem onClick={handleClose}>Delete</MenuItem>
-        {edit.map((option) => (
-          <MenuItem key={option.key} onClick={handleClose}>
-            {option.name}
-          </MenuItem>
-        ))}
+        <MenuItem onClick={handleEditClick}><Link to="/edit-product">Edit Product</Link></MenuItem>
       </Menu>
     </div>
   );

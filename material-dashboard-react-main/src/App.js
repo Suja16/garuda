@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
@@ -40,6 +40,8 @@ import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "co
 import brandWhite from "assets/images/logos/garuda_logo.png";
 import brandDark from "assets/images/logos/garuda_logo.png";
 import ProductForm from './components/ProductForm';
+import ProductListing from 'components/ProductListing';
+import EditProduct from 'components/Edit-Product'; 
 
 
 export default function App() {
@@ -57,6 +59,17 @@ export default function App() {
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
+
+  function App() {
+    return (
+      <Router>
+        <Routes>
+          <Route exact path="/" component={ProductListing} />
+          <Route path="/edit-product" component={EditProduct} />
+        </Routes>
+      </Router>
+    );
+  }
 
   // Cache for the rtl
   useMemo(() => {

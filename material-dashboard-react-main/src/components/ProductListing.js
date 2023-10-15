@@ -47,6 +47,14 @@ const sectionTextStyle = {
   fontSize: "16px",
   lineHeight: "1.5",
 };
+const inputStyle = {
+  width: '60px', 
+  padding: '8px',
+  border: '1px solid #ccc',
+  borderRadius: '4px',
+  boxSizing: 'border-box',
+  textAlign: 'right', 
+};
 
 function ProductListing() {
   const [products, setProducts] = useState([]); 
@@ -115,37 +123,42 @@ function ProductListing() {
                       <br />
                       <strong>Product MRP:</strong> {editMode[product.id] ? (
                         <input
-                          type="text"
-                          value={editedValues[product.id]?.mrp || product.mrp}
-                          onChange={(e) => handleChange(product.id, 'mrp', e.target.value)}
-                        />
+                        type="text"
+                        value={editedValues[product.id]?.mrp || product.mrp}
+                        onChange={(e) => handleChange(product.id, 'mrp', e.target.value)}
+                        style={inputStyle}
+                      />
                       ) : (
                         product.mrp
                       )}
                       <br />
                       <strong>Product Selling Price:</strong> {editMode[product.id] ? (
                         <input
-                          type="text"
-                          value={editedValues[product.id]?.sp || product.sp}
-                          onChange={(e) => handleChange(product.id, 'sp', e.target.value)}
-                        />
+                        type="text"
+                        value={editedValues[product.id]?.sp || product.sp}
+                        onChange={(e) => handleChange(product.id, 'sp', e.target.value)}
+                        style={inputStyle} 
+                      />
                       ) : (
                         product.sp
                       )}
                       <br />
                       <strong>Product Stock:</strong> {editMode[product.id] ? (
                         <input
-                          type="text"
-                          value={editedValues[product.id]?.Stock || product.Stock}
-                          onChange={(e) => handleChange(product.id, 'Stock', e.target.value)}
-                        />
+                        type="text"
+                        value={editedValues[product.id]?.Stock || product.Stock}
+                        onChange={(e) => handleChange(product.id, 'Stock', e.target.value)}
+                        style={inputStyle} 
+                      />
                       ) : (
                         product.Stock
                       )}
-                      <br />
-                      <strong>Product Category:</strong> {product.category}
+                      
                       <br />
                       <strong>Product SKU:</strong> {product.sku}
+                      <br />
+
+                      <strong>Product Category:</strong> {product.category}
                       <br />
                       {editMode[product.id] ? (
                         <button onClick={() => handleSave(product.id)}>
