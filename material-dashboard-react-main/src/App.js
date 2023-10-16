@@ -42,6 +42,7 @@ import brandDark from "assets/images/logos/garuda_logo.png";
 import ProductForm from './components/ProductForm';
 import ProductListing from 'components/ProductListing';
 import EditProduct from 'components/Edit-Product'; 
+import { Edit } from "@mui/icons-material";
 
 
 export default function App() {
@@ -59,17 +60,6 @@ export default function App() {
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
-
-  function App() {
-    return (
-      <Router>
-        <Routes>
-          <Route exact path="/" component={ProductListing} />
-          <Route path="/edit-product" component={EditProduct} />
-        </Routes>
-      </Router>
-    );
-  }
 
   // Cache for the rtl
   useMemo(() => {
@@ -195,6 +185,7 @@ export default function App() {
         {getRoutes(routes)}
         <Route path="/product-form" element={<ProductForm />} />
         <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/editprod" element={<EditProduct />} />
       </Routes>
     </ThemeProvider>
   );
