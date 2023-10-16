@@ -64,11 +64,12 @@
 
 import React from "react";
 import { FaSearch, FaBell } from "react-icons/fa";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-blue-700 text-violet-50 h-20 flex items-center justify-center">
+      <div className="navbar bg-#1976d2 text-violet-50 h-20 flex items-center justify-center custom-nav-one-height">
         <nav className="container mx-auto px-10 sm:flex-row flex-col flex justify-between items-center">
           <div className="nav-left">
             <h2 className="brand text-2xl text-violet-50 italic font-semibold">
@@ -95,7 +96,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/signup"
-                  className="text-gray-300 font-normal hover:text-gray-400 duration-300"
+                  className="text-white-300 font-normal hover:text-gray-400 duration-300"
                 >
                   Sign Up
                 </a>
@@ -103,7 +104,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="/login"
-                  className="text-gray-300 font-normal hover:text-gray-400 duration-300"
+                  className="text-white-300 font-normal hover:text-gray-400 duration-300"
                 >
                   Login
                 </a>
@@ -113,15 +114,15 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div className="bg-blue-700 text-white py-2 text-center flex justify-start">
+      <div className="bg-#1976d2 text-white py-2 text-center flex justify-start custom-border-nav-two">
         <span className="text-xl font-semibold ml-auto" style={{ marginLeft: "150px" }}>
           Categories
         </span>
         <div className="ml-auto flex items-center" style={{ marginRight: "150px" }}>
           <span className="text-xl font-semibold">Features & Benefits</span>
-          <span className="mx-4 text-gray-500">|</span>
+          <span className="mx-4 text-white-500">|</span>
           <span className="text-xl font-semibold">View Contracts</span>
-          <span className="mx-4 text-gray-500">|</span>
+          <span className="mx-4 text-white-500">|</span>
           <span className="text-xl font-semibold">
             <FaBell className="mr-2" />
           </span>
