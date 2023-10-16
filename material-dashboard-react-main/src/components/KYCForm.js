@@ -3,6 +3,7 @@ import { Box, TextField, Button, Select, MenuItem, FormControl, InputLabel } fro
 import { ThemeProvider } from "@mui/material/styles";
 import './KYCForm.css';
 import theme from "assets/theme";
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
 
 
 const KYCForm = () => {
@@ -55,8 +56,11 @@ const KYCForm = () => {
   };
 
   return (
+    
     <ThemeProvider theme={theme}>
       <Box py={3}>
+      <DashboardNavbar />
+
         <div className="kyc-form">
           <h1> KYC Registration</h1>
 
