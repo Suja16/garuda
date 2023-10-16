@@ -6,6 +6,8 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, collection, doc, updateDoc } from 'firebase/firestore';
 import LongMenu from "./Menu/HeightMenu";
+import { Directions } from "@mui/icons-material";
+//import './ProductListing.css'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -40,7 +42,7 @@ const sectionStyle = {
   padding: "20px",
   borderRadius: "8px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-  flex: 1, 
+  display: "flex",
 };
 
 const sectionTextStyle = {
@@ -117,7 +119,7 @@ function ProductListing() {
                     alt={product.title}
                     style={imageStyle}
                   />
-                  <div style={sectionStyle}>
+                  <div style={sectionStyle} className="prodis">
                     <p style={sectionTextStyle}>
                       <strong>Product Description:</strong> {product.description}
                       <br />
