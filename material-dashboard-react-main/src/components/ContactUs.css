@@ -1,0 +1,21 @@
+.css-1c7fiqk {
+    margin-bottom: 24px;
+    opacity: 1;
+    background: transparent;
+    color: #344767;
+    border-radius: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.contactus{
+    height: 100%;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffff;
+}

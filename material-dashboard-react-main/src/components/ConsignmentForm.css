@@ -20,7 +20,7 @@ label {
 select,
 input {
   width: 100%;
-  padding: 8px;
+  padding: 13px !important;
   margin-bottom: 16px;
   border-radius:12px;
   border-color: #745700;
@@ -68,12 +68,12 @@ margin-top: 150px;
 
 .Submit{
 width: 150px;
-background-color: #4dce57;
+background-color: #CBE9FF !important;
 cursor: pointer;
 }
 
 body{
-background-color: #023047;
+background-color: #ffffff !important;
 }
 
 ::placeholder{

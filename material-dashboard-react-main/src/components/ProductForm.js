@@ -4,7 +4,7 @@ import './ConsignmentForm.css';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+
 const firebaseConfig = {
   apiKey: "AIzaSyB_k8huWepobUHQs2WqlCUI8Lh514MS7D8",
   authDomain: "garuda-d278e.firebaseapp.com",
@@ -141,7 +141,6 @@ const ConsignmentForm = () => {
 
   return (
     <MDBox py={3}>
-      <DashboardNavbar/>
       <form className="consignment-form" onSubmit={handleSubmit}>
         <h1>Add Product</h1>
 
@@ -208,7 +207,7 @@ const ConsignmentForm = () => {
           </select>
         </div>
 
-        <div>
+        <div className='prod-form-field'>
           <label htmlFor="myFile">Product Image:</label>
           <input
             type="file"
@@ -218,8 +217,8 @@ const ConsignmentForm = () => {
           />
           
           {selectedFileName && <div className="selected-file-name">Selected File: {selectedFileName}</div>}
-          <input type="submit" value="Submit" className='Submit'></input>
         </div>
+        <div><input type="submit" value="Submit" className='Submit'></input></div>
 
         {productAdded && <div className="success-message">Product Added Successfully</div>}
 
