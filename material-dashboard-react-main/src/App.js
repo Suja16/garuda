@@ -43,6 +43,8 @@ import ProductForm from './components/ProductForm';
 import ProductListing from 'components/ProductListing';
 import EditProduct from 'components/Edit-Product'; 
 import { Edit } from "@mui/icons-material";
+import Overview from "layouts/profile";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 
 export default function App() {
@@ -187,6 +189,7 @@ export default function App() {
         <Route path="*" element={<Navigate to="/dashboard" />} />
         <Route path="/editprod" element={<EditProduct />} />
       </Routes>
+     
     </ThemeProvider>
   );
 }

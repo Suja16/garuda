@@ -40,6 +40,8 @@ import {
   setOpenConfigurator,
 } from "context";
 
+import Overview from "layouts/profile";
+
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
   const [controller, dispatch] = useMaterialUIController();
@@ -110,6 +112,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
       return colorValue;
     },
   });
+  
+
 
   return (
     <AppBar
@@ -126,12 +130,12 @@ function DashboardNavbar({ absolute, light, isMini }) {
             <MDBox pr={1}>
             </MDBox>
             <MDBox color={light ? "white" : "inherit"}>
-              <Link to="/authentication/sign-in/basic">
+              <Link to="/profile">
                 <IconButton sx={navbarIconButton} size="small" disableRipple>
                   <Icon sx={iconsStyle}>account_circle</Icon>
                 </IconButton>
               </Link>
-              <Link to="">
+              <Link to="/podcasts">
                 <IconButton sx={navbarIconButton} size="small" disableRipple>
                   <Icon sx={iconsStyle}>podcasts</Icon>
                 </IconButton>
