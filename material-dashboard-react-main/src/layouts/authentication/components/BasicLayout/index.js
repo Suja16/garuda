@@ -50,7 +50,10 @@ function BasicLayout({ image, children }) {
           </Grid>
         </Grid>
       </MDBox>
-      <Footer />
+      
+         <Footer />
+      
+      
     </PageLayout>
   );
 }

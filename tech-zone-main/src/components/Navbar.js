@@ -62,11 +62,29 @@
 
 // export default Navbar;
 
-import React from "react";
+import React, { useRef } from "react";
 import { FaSearch, FaBell } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
+
+  const scrollToPopularCategories = () => {
+    const popularCategoriesSection = document.getElementById("popular-categories");
+    if (popularCategoriesSection) {
+      popularCategoriesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById("features");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+ 
+
+
   return (
     <div>
       <div className="navbar bg-#1976d2 text-violet-50 h-20 flex items-center justify-center custom-nav-one-height">
@@ -127,11 +145,16 @@ const Navbar = () => {
       </div>
 
       <div className="bg-#1976d2 text-white py-2 text-center flex justify-start custom-border-nav-two">
-        <span className="text-xl font-semibold ml-auto" style={{ marginLeft: "150px" }}>
-          Categories
-        </span>
+      <span
+        className="text-xl font-semibold ml-auto"
+        style={{ marginLeft: "150px", cursor: "pointer" }}
+        onClick={scrollToPopularCategories}
+      >
+        Categories
+      </span>
         <div className="ml-auto flex items-center" style={{ marginRight: "150px" }}>
-          <span className="text-xl font-semibold">Features & Benefits</span>
+          <span className="text-xl font-semibold" style={{cursor: "pointer" }}
+        onClick={scrollToFeatures} >Features & Benefits</span>
           <span className="mx-4 text-white-500">|</span>
           <span className="text-xl font-semibold">View Contracts</span>
           <span className="mx-4 text-white-500">|</span>
