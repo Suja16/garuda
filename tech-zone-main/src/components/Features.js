@@ -4,20 +4,20 @@ import "./Features.css";
 const Features = () => {
   const services = [
     {
-      title: "Service 1",
-      description: "Description of Service 1.",
+      title: "Hassle-free Logistics",
+      description: "Efficient logistics solution with a streamline delivery process",
     },
     {
-      title: "Service 2",
-      description: "Description of Service 2.",
+      title: "Multilingual Support",
+      description: "Our website provides multilingual support for enhancing user experience and reach",
     },
     {
-      title: "Service 3",
-      description: "Description of Service 3.",
+      title: "Seemless Buisness Interaction",
+      description: "Fostering efficient communication and collaboration, promoting productivity and success",
     },
     {
-      title: "Service 4",
-      description: "Description of Service 4.",
+      title: "Regular Updates",
+      description: "We provide regular updates on government policies and programs",
     },
     // Add more services as needed
   ];

@@ -35,9 +35,9 @@ const Slide = ({ item }) => {
           {item.headline}
         </h1>
         <p className="sm:w-3/5 w-full sm:text-lg text-sm">{item.body}</p>
-        <Link className="slide-btn uppercase border border-violet-50 sm:py-4 px-5 py-2 hover:text-orange-50 hover:bg-orange-700 hover:border-orange-700 duration-300 font-medium mt-5 flex justify-center items-center">
+        {/* <Link className="slide-btn uppercase border border-violet-50 sm:py-4 px-5 py-2 hover:text-orange-50 hover:bg-orange-700 hover:border-orange-700 duration-300 font-medium mt-5 flex justify-center items-center">
           {item.cta}
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

@@ -101,7 +101,7 @@ const data = [
     src: "https://www.mrdiy.co.in/?cur=promotion/download&fid=20",
     headline: "",
     body: "",
-    cta: "Shop now",
+    //cta: "Shop now",
     category: "sale",
   },
   {
@@ -109,7 +109,7 @@ const data = [
     src: "https://media.cntraveler.com/photos/54e368046450ad091fd9a8e8/16:9/w_2580,c_limit/martha-graeff-nyfw-tout.jpg",
     headline: "Shop For the Latest Trends",
     body: "Buy the latest dresses and clothes at great prices and take your fashion game to the next level.",
-    cta: "Shop now",
+    // cta: "Shop now",
     category: "fashion",
   },
   {
@@ -117,7 +117,7 @@ const data = [
     src: "https://i.ibb.co/kmr5qQv/headphones.jpg",
     headline: "Exciting Tech Deals",
     body: "Get your hands on the latest tech products.",
-    cta: "Shop now",
+    //cta: "Shop now",
     category: "electronics",
   },
   {
@@ -125,7 +125,7 @@ const data = [
     src: "https://www.bergerpaints.com/blog/wp-content/uploads/2023/06/Minimalist-home-decor-1280x720.png",
     headline: "Spruce Up Your Home",
     body: "Furnish your home with the best home decor options.",
-    cta: "Shop now",
+    //cta: "Shop now",
     category: "home decor",
   },
   {
@@ -133,7 +133,7 @@ const data = [
     src: "https://cdn.theatlantic.com/thumbor/hmUEQDSWj9xDrDAF17KdbY1uxnw=/0x0:4800x2700/1600x900/media/img/mt/2022/12/What_Gifts_Say/original.jpg",
     headline: "Gifts to Offer",
     body: "Want to gift a friend or a loved one? We provide offers on purchases made as gifts.",
-    cta: "Shop now",
+    //cta: "Shop now",
     category: "gifts",
   },
 ];

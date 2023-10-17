@@ -72,9 +72,21 @@ const Navbar = () => {
       <div className="navbar bg-#1976d2 text-violet-50 h-20 flex items-center justify-center custom-nav-one-height">
         <nav className="container mx-auto px-10 sm:flex-row flex-col flex justify-between items-center">
           <div className="nav-left">
-            <h2 className="brand text-2xl text-violet-50 italic font-semibold">
-              <span className="text-rose-500">Garuda</span>
-            </h2>
+          <div className="logo-container flex items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnDGbkvs1jyPz-himCSBwBTYbWyE8ihumpDkHtmkE8BQ2xakUqHYnAvpiBaH6q0vUyrf8&usqp=CAU"
+                alt="Ashoka Logo"
+                className="logo-image"
+              />
+              {/* <h2 className="brand text-2xl text-violet-50 italic font-semibold">
+                <span className="text-rose-500">Garuda</span>
+              </h2> */}
+              <img
+                src="Images_/logo.png"
+                alt="Garuda Logo"
+                className="brand logo-image"
+              />
+            </div>
           </div>
           <div className="nav-center">
             <div
