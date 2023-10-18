@@ -3,13 +3,13 @@ import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-
+import './ContactUs.css';
 const containerStyle = {
   marginTop: "50px", 
 };
 
 const formStyle = {
-  backgroundColor: "#f7f7f7",
+  backgroundColor: "#ffffff",
   padding: "20px",
   borderRadius: "8px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
@@ -19,6 +19,7 @@ const labelStyle = {
   fontSize: "18px",
   fontWeight: "bold",
   marginBottom: "10px",
+  
 };
 
 const inputStyle = {
@@ -32,7 +33,7 @@ const inputStyle = {
 const submitStyle = {
   width: "100%",
   padding: "15px",
-  backgroundColor: "#FF9900",
+  backgroundColor: "#49a3f1",
   color: "#fff",
   fontSize: "18px",
   fontWeight: "bold",
@@ -42,7 +43,7 @@ const submitStyle = {
 };
 
 const sectionStyle = {
-  backgroundColor: "#f7f7f7",
+  backgroundColor: "white",
   padding: "20px",
   borderRadius: "8px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
@@ -82,10 +83,10 @@ function ContactUs() {
           <Grid item xs={12} lg={6}>
             <MDBox mb={3}>
               <h2>Contact Us</h2>
-              <div style={formStyle} className="contact">
-                <form className="kyc-form" onSubmit={handleSubmit}>
+              <div style={formStyle}>
+                <form className="contactus" onSubmit={handleSubmit}>
                   <label style={labelStyle} htmlFor="name">
-                    Your Name
+                    Enter Name
                   </label>
                   <input
                     style={inputStyle}

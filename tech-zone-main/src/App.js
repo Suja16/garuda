@@ -20,8 +20,9 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div className="app min-h-screen bg-gray-50 text-gray-700">
-        <Navbar />
+        
         {/* <SearchBar onSearch={handleSearch} /> Render the SearchBar */}
         <ToastContainer />
         <Routes>

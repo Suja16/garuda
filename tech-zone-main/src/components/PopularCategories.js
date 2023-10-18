@@ -12,7 +12,7 @@ const PopularCategories = () => {
             alt="Category 1"
             className="category-image"
           />
-          <div className="category-text">Category 1</div>
+          
         </div>
 
         {/* Image 2 */}
@@ -22,7 +22,7 @@ const PopularCategories = () => {
             alt="Category 2"
             className="category-image"
           />
-          <div className="category-text">Category 2</div>
+          
         </div>
 
         {/* Image 3 */}
@@ -32,7 +32,7 @@ const PopularCategories = () => {
             alt="Category 3"
             className="category-image"
           />
-          <div className="category-text">Category 3</div>
+          
         </div>
 
         {/* Image 4 */}
@@ -42,7 +42,7 @@ const PopularCategories = () => {
             alt="Category 4"
             className="category-image"
           />
-          <div className="category-text">Category 4</div>
+          
         </div>
 
         {/* Image 5 */}
@@ -52,7 +52,7 @@ const PopularCategories = () => {
             alt="Category 5"
             className="category-image"
           />
-          <div className="category-text">Category 5</div>
+          
         </div>
 
         {/* Image 6 */}
@@ -62,7 +62,7 @@ const PopularCategories = () => {
             alt="Category 6"
             className="category-image"
           />
-          <div className="category-text">Category 6</div>
+          
         </div>
       </div>
       <div className="see-more">

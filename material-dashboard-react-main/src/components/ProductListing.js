@@ -4,7 +4,7 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, collection, doc, updateDoc } from 'firebase/firestore';
+import { getFirestore, getDocs, collection, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import LongMenu from "./Menu/HeightMenu";
 import { Directions } from "@mui/icons-material";
 //import './ProductListing.css'
@@ -64,6 +64,8 @@ function ProductListing() {
   const [editedValues, setEditedValues] = useState({});
 
   const fetchProducts = async () => {
+
+    
     const querySnapshot = await getDocs(collection(firestore, 'products'));
     const productData = [];
     

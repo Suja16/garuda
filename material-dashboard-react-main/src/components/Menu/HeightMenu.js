@@ -5,14 +5,28 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EditProduct from 'components/Edit-Product';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, getDocs, collection, doc, updateDoc, deleteDoc, collectionGroup, getDoc } from 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
 
 const ITEM_HEIGHT = 48;
 
-export default function LongMenu() {
+export default function LongMenu({ docId }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
-
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,15 +39,38 @@ export default function LongMenu() {
   const handleEditClick = () => {
     setAnchorEl(null);
     navigate('/editprod');
+  };
+
+  /* const handleDeleteClick = async (id) => {
+  
+    try {
+      await deleteDoc(firestore, 'products', product => product.id === id);
+      console.log('Document successfully deleted');
+    } catch (error) {
+      console.error('Error deleting document: ', error);
+    }
+  
+    setAnchorEl(null);
+  }; */
+
+  const handleDeleteClick = (id) => {
+    firestore.collection('products')
+    .doc()
+    .doc(id).delete().then(() => {
+      console.log("Document successfully deleted!");
+    }).catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+    
   }
 
   const Edit = [
     {
-      type: "collapse",
-      name: "edit",
-      key: "Edit-Product",
-      route: "Edit-Product",
-      component: <EditProduct  />,
+      type: 'collapse',
+      name: 'Edit Product',
+      key: 'Edit-Product',
+      route: 'Edit-Product',
+      component: <EditProduct />,
     },
   ];
 
@@ -64,7 +101,7 @@ export default function LongMenu() {
           },
         }}
       >
-        <MenuItem onClick={handleClose}>Delete</MenuItem>
+        <MenuItem onClick={handleDeleteClick}>Delete</MenuItem>
         {Edit.map((option) => (
           <MenuItem key={option.key} onClick={handleEditClick}>
             {option.name}
