@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getFirestore,doc,getDoc,updateDoc,setDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-
+import { Grid } from '@mui/material';
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -83,7 +83,7 @@ const EditProduct = () => {
   };
 
   return (
-    <div>
+    <div  style={{width:'50%', display:'flex',flexDirection:'column',marginLeft:'30vw',marginBottom:'20px'}}>
       <h1>Edit Product</h1>
       <MDBox mb={3}>
         <label>Title:</label>

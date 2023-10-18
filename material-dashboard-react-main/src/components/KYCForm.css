@@ -6,7 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #bde0fe;
+    background-color: transparent;
+    
   }
   
   
@@ -75,4 +76,3 @@
   .date{
     cursor: pointer;
   }
-  

@@ -82,7 +82,7 @@ function ContactUs() {
           <Grid item xs={12} lg={6}>
             <MDBox mb={3}>
               <h2>Contact Us</h2>
-              <div style={formStyle}>
+              <div style={formStyle} className="contact">
                 <form className="kyc-form" onSubmit={handleSubmit}>
                   <label style={labelStyle} htmlFor="name">
                     Your Name
