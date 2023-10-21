@@ -62,12 +62,11 @@
 
 // export default Navbar;
 
-import React, { useRef } from "react";
-import { FaSearch, FaBell } from "react-icons/fa";
+import React from "react";
+import { FaBell,FaPhone } from "react-icons/fa";
 import "./Navbar.css";
 
 const Navbar = () => {
-
   const scrollToPopularCategories = () => {
     const popularCategoriesSection = document.getElementById("popular-categories");
     if (popularCategoriesSection) {
@@ -82,23 +81,17 @@ const Navbar = () => {
     }
   };
 
- 
-
-
   return (
     <div>
       <div className="navbar bg-#1976d2 text-violet-50 h-20 flex items-center justify-center custom-nav-one-height">
         <nav className="container mx-auto px-10 sm:flex-row flex-col flex justify-between items-center">
           <div className="nav-left">
-          <div className="logo-container flex items-center">
+            <div className="logo-container flex items-center">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnDGbkvs1jyPz-himCSBwBTYbWyE8ihumpDkHtmkE8BQ2xakUqHYnAvpiBaH6q0vUyrf8&usqp=CAU"
                 alt="Ashoka Logo"
                 className="logo-image"
               />
-              {/* <h2 className="brand text-2xl text-violet-50 italic font-semibold">
-                <span className="text-rose-500">Garuda</span>
-              </h2> */}
               <img
                 src="Images_/logo.png"
                 alt="Garuda Logo"
@@ -106,20 +99,27 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <div className="nav-center">
-            <div
-              className="search-bar bg-white flex items-center px-4 rounded-md"
-              style={{ width: "617px", height: "45px" }}
+          <div className="nav-center" style={{ display: "flex", alignItems: "center" }}>
+            <span
+              className="text-xl font-semibold ml-4"
+              style={{ cursor: "pointer" }}
+              onClick={scrollToPopularCategories}
             >
-              <input
-                type="text"
-                className="w-full h-full outline-none"
-                placeholder="Search..."
-              />
-              <span className="ml-2 text-gray-500">
-                <FaSearch />
-              </span>
-            </div>
+              Categories
+            </span>
+            <span className="mx-4 text-white-500">|</span>
+            <span className="text-xl font-semibold ml-4" style={{ cursor: "pointer" }} onClick={scrollToFeatures}>
+              Features & Benefits
+            </span>
+            <span className="mx-4 text-white-500">|</span>
+            <span className="text-xl font-semibold ml-4">
+              <FaBell className="mr-2" />
+            </span>
+            <span className="mx-4 text-white-500">|</span>
+            <span className="text-xl font-semibold ml-4">+91 XXXX XXXX 99 </span>
+            <span className="text-xl font-semibold ml-4">
+              <FaPhone className="mr-2" />
+            </span>
           </div>
           <div className="nav-right">
             <ul className="nav-links flex gap-5 items-center">
@@ -143,31 +143,9 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
-
-      <div className="bg-#1976d2 text-white py-2 text-center flex justify-start custom-border-nav-two">
-      <span
-        className="text-xl font-semibold ml-auto"
-        style={{ marginLeft: "150px", cursor: "pointer" }}
-        onClick={scrollToPopularCategories}
-      >
-        Categories
-      </span>
-        <div className="ml-auto flex items-center" style={{ marginRight: "150px" }}>
-          <span className="text-xl font-semibold" style={{cursor: "pointer" }}
-        onClick={scrollToFeatures} >Features & Benefits</span>
-          <span className="mx-4 text-white-500">|</span>
-          <span className="text-xl font-semibold">View Contracts</span>
-          <span className="mx-4 text-white-500">|</span>
-          <span className="text-xl font-semibold">
-            <FaBell className="mr-2" />
-          </span>
-        </div>
-      </div>
     </div>
   );
 };
 
 export default Navbar;
-
-
 
