@@ -1,159 +1,168 @@
-import React, { useState } from 'react';
-import { Box, TextField, Button, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
-import './KYCForm.css';
-import theme from "assets/theme";
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
-
-const KYCForm = () => {
-  // State variables
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [mobileNo, setMobileNo] = useState('');
-  const [address, setAddress] = useState('');
-  const [docSelect, setDocSelect] = useState('');
-  const [documentCode, setDocumentCode] = useState('');
-  const [docIssue, setDocIssue] = useState('');
-  const [date, setDate] = useState('');
-  const [uploadDoc, setUploadDoc] = useState('');
-
-  // Event handlers
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleMobileNoChange = (event) => {
-    setMobileNo(event.target.value);
-  };
-
-  const handleAddressChange = (event) => {
-    setAddress(event.target.value);
-  };
-
-  const handleDocSelectChange = (event) => {
-    setDocSelect(event.target.value);
-  };
-
-  const handleDocumentCodeChange = (event) => {
-    setDocumentCode(event.target.value);
-  };
-
-  const handleDocIssueChange = (event) => {
-    setDocIssue(event.target.value);
-  };
-
-  const handleDateChange = (event) => {
-    setDate(event.target.value);
-  };
-
-  const handleUploadDocChange = (event) => {
-    setUploadDoc(event.target.value);
-  };
-
+export default function FormPropsTextFields() {
   return (
-    
-    <ThemeProvider theme={theme}>
-      <Box py={3}>
-      <DashboardNavbar />
-
-        <div className="kyc-form">
-          <h1> KYC Registration</h1>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Username"
-              value={username}
-              onChange={handleUsernameChange}
-            />
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Password"
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Mobile no"
-              type="tel"
-              value={mobileNo}
-              onChange={handleMobileNoChange}
-            />
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Address"
-              multiline
-              rows={4}
-              placeholder="Enter address"
-              value={address}
-              onChange={handleAddressChange}
-            />
-          </div>
-
-          <div className='prod-form-field docs'>
-            <FormControl>
-              <InputLabel>Select KYC Document</InputLabel>
-              <Select
-                value={docSelect}
-                onChange={handleDocSelectChange}
-              >
-                <MenuItem value="">Select KYC Document</MenuItem>
-                <MenuItem value="Category 1">Import Export Code (IEC)</MenuItem>
-                <MenuItem value="Category 2">AD Code</MenuItem>
-                <MenuItem value="Category 3">GSTIN</MenuItem>
-                <MenuItem value="Category 4">Others</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Document Code"
-              value={documentCode}
-              onChange={handleDocumentCodeChange}
-            />
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Document Issued By"
-              value={docIssue}
-              onChange={handleDocIssueChange}
-            />
-          </div>
-
-          <div className='prod-form-field'>
-            <TextField
-              label="Date of issue"
-              type="date"
-              value={date}
-              onChange={handleDateChange}
-            />
-          </div>
-
-          <div>
-            <InputLabel>Upload Document</InputLabel>
-            <input type="file" id="myFile" name="myFile" className='up-docs' value={uploadDoc} onChange={handleUploadDocChange} />
-          </div>
-
-          <div>
-            <Button variant="contained" color="primary">Submit</Button>
-          </div>
-        </div>
-      </Box>
-    </ThemeProvider>
+    <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Required"
+          defaultValue="Hello World"
+        />
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+        />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+        />
+        <TextField
+          id="outlined-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+        <TextField
+          id="outlined-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <TextField id="outlined-search" label="Search field" type="search" />
+        <TextField
+          id="outlined-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="filled-required"
+          label="Required"
+          defaultValue="Hello World"
+          variant="filled"
+        />
+        <TextField
+          disabled
+          id="filled-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+          variant="filled"
+        />
+        <TextField
+          id="filled-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="filled"
+        />
+        <TextField
+          id="filled-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+          variant="filled"
+        />
+        <TextField
+          id="filled-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+        />
+        <TextField
+          id="filled-search"
+          label="Search field"
+          type="search"
+          variant="filled"
+        />
+        <TextField
+          id="filled-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+          variant="filled"
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="standard-required"
+          label="Required"
+          defaultValue="Hello World"
+          variant="standard"
+        />
+        <TextField
+          disabled
+          id="standard-disabled"
+          label="Disabled"
+          defaultValue="Hello World"
+          variant="standard"
+        />
+        <TextField
+          id="standard-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="standard"
+        />
+        <TextField
+          id="standard-read-only-input"
+          label="Read Only"
+          defaultValue="Hello World"
+          InputProps={{
+            readOnly: true,
+          }}
+          variant="standard"
+        />
+        <TextField
+          id="standard-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="standard"
+        />
+        <TextField
+          id="standard-search"
+          label="Search field"
+          type="search"
+          variant="standard"
+        />
+        <TextField
+          id="standard-helperText"
+          label="Helper text"
+          defaultValue="Default Value"
+          helperText="Some important text"
+          variant="standard"
+        />
+      </div>
+    </Box>
   );
-};
-
-export default KYCForm;
+} 

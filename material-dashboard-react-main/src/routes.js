@@ -16,6 +16,7 @@ import ContactUs from "components/ContactUs";
 import ProductListing from "components/ProductListing";
 import EditProduct  from "components/Edit-Product";
 import Pod from "components/Pod";
+import PostOfficeFinder from "components/postofficefinder";
 
 const routes = [
   {
@@ -97,6 +98,14 @@ const routes = [
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "contact-us",
     component: <ContactUs  />,
+  },
+  {
+    type: "collapse",
+    name: "Find post-office",
+    key: "Postofficefinder",
+    icon: <Icon fontSize="small">call-support</Icon>,
+    route: "postofficefinder",
+    component: <PostOfficeFinder  />,
   },
   
 ];
