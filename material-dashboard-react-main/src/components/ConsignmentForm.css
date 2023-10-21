@@ -16,7 +16,10 @@ label {
   font-family: 'Inter';
   color: #745700;
 }
-
+.title-hint {
+  font-size: 12px; /* You can adjust the font size as needed */
+  color: #666; /* Optional: You can set the color to gray or any other color you prefer */
+}
 select,
 input {
   width: 100%;

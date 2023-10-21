@@ -7,7 +7,6 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, collection, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 import LongMenu from "./Menu/HeightMenu";
 import { Directions } from "@mui/icons-material";
-//import './ProductListing.css'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -28,13 +27,13 @@ const containerStyle = {
 
 const productContainerStyle = {
   display: "flex",
-  alignItems: "center", 
+  alignItems: "center",
 };
 
 const imageStyle = {
-  width: "200px", 
+  width: "200px",
   height: "200px",
-  marginRight: "5px", 
+  marginRight: "5px",
 };
 
 const sectionStyle = {
@@ -50,25 +49,23 @@ const sectionTextStyle = {
   lineHeight: "1.5",
 };
 const inputStyle = {
-  width: '60px', 
+  width: '60px',
   padding: '8px',
   border: '1px solid #ccc',
   borderRadius: '4px',
   boxSizing: 'border-box',
-  textAlign: 'right', 
+  textAlign: 'right',
 };
 
 function ProductListing() {
-  const [products, setProducts] = useState([]); 
+  const [products, setProducts] = useState([]);
   const [editMode, setEditMode] = useState({});
   const [editedValues, setEditedValues] = useState({});
 
   const fetchProducts = async () => {
-
-    
     const querySnapshot = await getDocs(collection(firestore, 'products'));
     const productData = [];
-    
+
     querySnapshot.forEach((doc) => {
       productData.push({ ...doc.data(), id: doc.id });
       setEditMode({ ...editMode, [doc.id]: false });
@@ -84,12 +81,20 @@ function ProductListing() {
 
   const handleEdit = (id) => {
     setEditMode({ ...editMode, [id]: true });
-    setEditedValues({ ...editedValues, [id]: products.find(product => product.id === id) });
+    setEditedValues({ ...editedValues, [id]: { ...products.find(product => product.id === id) } });
   };
 
   const handleSave = async (id) => {
     try {
-      await updateDoc(doc(firestore, 'products', id), editedValues[id]);
+      // Check if edited value is empty and set it to null or an empty string
+      const updatedValue = { ...editedValues[id] };
+      for (const key in updatedValue) {
+        if (!updatedValue[key]) {
+          updatedValue[key] = null; // or updatedValue[key] = '';
+        }
+      }
+
+      await updateDoc(doc(firestore, 'products', id), updatedValue);
       setEditMode({ ...editMode, [id]: false });
     } catch (error) {
       console.error('Error updating document: ', error);
@@ -97,15 +102,15 @@ function ProductListing() {
   };
 
   const handleChange = (id, field, value) => {
-    setEditedValues({ 
-      ...editedValues, 
-      [id]: { 
-        ...editedValues[id], 
-        [field]: value 
-      } 
+    setEditedValues({
+      ...editedValues,
+      [id]: {
+        ...editedValues[id],
+        [field]: value
+      }
     });
   };
-  
+
   return (
     <DashboardLayout>
       <DashboardNavbar absolute isMini />
@@ -123,46 +128,54 @@ function ProductListing() {
                   />
                   <div style={sectionStyle} className="prodis">
                     <p style={sectionTextStyle}>
-                      <strong>Product Description:</strong> {product.description}
+                      <strong>Product Description:</strong> {editMode[product.id] ? (
+                        <textarea
+                          rows="4"
+                          cols="50"
+                          style={{ width: '100%' }}
+                          value={editedValues[product.id]?.description || product.description}
+                          onChange={(e) => handleChange(product.id, 'description', e.target.value)}
+                        />
+                      ) : (
+                        product.description
+                      )}
                       <br />
                       <strong>Product MRP:</strong> {editMode[product.id] ? (
                         <input
-                        type="text"
-                        value={editedValues[product.id]?.mrp || product.mrp}
-                        onChange={(e) => handleChange(product.id, 'mrp', e.target.value)}
-                        style={inputStyle}
-                      />
+                          type="text"
+                          value={editedValues[product.id]?.mrp || product.mrp}
+                          onChange={(e) => handleChange(product.id, 'mrp', e.target.value)}
+                          style={inputStyle}
+                        />
                       ) : (
                         product.mrp
                       )}
                       <br />
                       <strong>Product Selling Price:</strong> {editMode[product.id] ? (
                         <input
-                        type="text"
-                        value={editedValues[product.id]?.sp || product.sp}
-                        onChange={(e) => handleChange(product.id, 'sp', e.target.value)}
-                        style={inputStyle} 
-                      />
+                          type="text"
+                          value={editedValues[product.id]?.sp || product.sp}
+                          onChange={(e) => handleChange(product.id, 'sp', e.target.value)}
+                          style={inputStyle}
+                        />
                       ) : (
                         product.sp
                       )}
                       <br />
                       <strong>Product Stock:</strong> {editMode[product.id] ? (
                         <input
-                        type="text"
-                        value={editedValues[product.id]?.Stock || product.Stock}
-                        onChange={(e) => handleChange(product.id, 'Stock', e.target.value)}
-                        style={inputStyle} 
-                      />
+                          type="text"
+                          value={editedValues[product.id]?.Stock || product.Stock}
+                          onChange={(e) => handleChange(product.id, 'Stock', e.target.value)}
+                          style={inputStyle}
+                        />
                       ) : (
                         product.Stock
                       )}
-                      
                       <br />
                       <strong>Product SKU:</strong> {product.sku}
                       <br />
-
-                      <strong>Product Category:</strong> {product.category}
+                      <strong>Product Category:</strong> {product.category} {/* Display category without edit option */}
                       <br />
                       {editMode[product.id] ? (
                         <button onClick={() => handleSave(product.id)}>
