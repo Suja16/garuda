@@ -54,7 +54,7 @@ const PostOfficeFinder = () => {
         value={pincode}
         onChange={(e) => setPincode(e.target.value)}
       />
-      <Button variant="contained" color="primary" onClick={handleSearch} style={{marginLeft:'1vw'}}>
+      <Button variant="contained" color="primary" onClick={handleSearch} style={{marginLeft:'1vw', color:'white'}}>
         Search
       </Button>
       {loading && <p>Loading...</p>}
