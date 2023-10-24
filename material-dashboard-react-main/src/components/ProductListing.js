@@ -56,6 +56,14 @@ const inputStyle = {
   boxSizing: 'border-box',
   textAlign: 'right',
 };
+const EditButton = {
+  backgroundColor: 'blue',
+  color: 'white',
+  border: 'none',
+  padding: '8px 16px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+}
 
 function ProductListing() {
   const [products, setProducts] = useState([]);
@@ -182,8 +190,8 @@ function ProductListing() {
                           Save
                         </button>
                       ) : (
-                        <button onClick={() => handleEdit(product.id)}>
-                          Quick Edit
+                        <button onClick={() => handleEdit(product.id) }>
+                          Edit
                         </button>
                       )}
                     </p>
