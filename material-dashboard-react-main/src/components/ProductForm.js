@@ -193,7 +193,7 @@ const ConsignmentForm = () => {
 
           {selectedFileName && <div className="selected-file-name">Selected File: {selectedFileName}</div>}
         </div>
-        <div><input type="submit" value="Submit" className='Submit'></input></div>
+        <div><input type="submit" value="Submit" className='Submit' ></input></div>
 
         {productAdded && <div className="success-message">Product Added Successfully</div>}
 

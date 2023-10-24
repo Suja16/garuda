@@ -1,168 +1,137 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import React, { useState } from 'react';
 
-export default function FormPropsTextFields() {
+const KYCForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    mobileNumber: '',
+    panCard: null,
+    aadharCard: null,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files[0],
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here (e.g., send data to the server).
+    // Reset the form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      mobileNumber: '',
+      panCard: null,
+      aadharCard: null,
+    });
+  };
+
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh', // Centers the form vertically on the page
+  };
+
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Hello World"
-        />
-        <TextField
-          disabled
-          id="outlined-disabled"
-          label="Disabled"
-          defaultValue="Hello World"
-        />
-        <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-        />
-        <TextField
-          id="outlined-read-only-input"
-          label="Read Only"
-          defaultValue="Hello World"
-          InputProps={{
-            readOnly: true,
-          }}
-        />
-        <TextField
-          id="outlined-number"
-          label="Number"
-          type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <TextField id="outlined-search" label="Search field" type="search" />
-        <TextField
-          id="outlined-helperText"
-          label="Helper text"
-          defaultValue="Default Value"
-          helperText="Some important text"
-        />
+    <div style={containerStyle}>
+      <div className="kyc-form">
+        <h2>KYC Verification Form</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="mobileNumber">Mobile Number</label>
+            <input
+              type="tel"
+              name="mobileNumber"
+              id="mobileNumber"
+              value={formData.mobileNumber}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="panCard">PAN Card (Upload)</label>
+            <input
+              type="file"
+              name="panCard"
+              id="panCard"
+              accept=".jpg, .jpeg, .png, .pdf"
+              onChange={handleFileChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="aadharCard">Aadhar Card (Upload)</label>
+            <input
+              type="file"
+              name="aadharCard"
+              id="aadharCard"
+              accept=".jpg, .jpeg, .png, .pdf"
+              onChange={handleFileChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="aadharCard">GST (Upload)</label>
+            <input
+              type="file"
+              name="aadharCard"
+              id="aadharCard"
+              accept=".jpg, .jpeg, .png, .pdf"
+              onChange={handleFileChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="aadharCard">IEC (Upload)</label>
+            <input
+              type="file"
+              name="aadharCard"
+              id="aadharCard"
+              accept=".jpg, .jpeg, .png, .pdf"
+              onChange={handleFileChange}
+              required
+            />
+          </div>
+          <button type="submit" style={{ backgroundColor: '#4f8de6', color: 'white',padding:'1vw',borderRadius:'5px' }}>Submit</button>
+        </form>
       </div>
-      <div>
-        <TextField
-          required
-          id="filled-required"
-          label="Required"
-          defaultValue="Hello World"
-          variant="filled"
-        />
-        <TextField
-          disabled
-          id="filled-disabled"
-          label="Disabled"
-          defaultValue="Hello World"
-          variant="filled"
-        />
-        <TextField
-          id="filled-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="filled"
-        />
-        <TextField
-          id="filled-read-only-input"
-          label="Read Only"
-          defaultValue="Hello World"
-          InputProps={{
-            readOnly: true,
-          }}
-          variant="filled"
-        />
-        <TextField
-          id="filled-number"
-          label="Number"
-          type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="filled"
-        />
-        <TextField
-          id="filled-search"
-          label="Search field"
-          type="search"
-          variant="filled"
-        />
-        <TextField
-          id="filled-helperText"
-          label="Helper text"
-          defaultValue="Default Value"
-          helperText="Some important text"
-          variant="filled"
-        />
-      </div>
-      <div>
-        <TextField
-          required
-          id="standard-required"
-          label="Required"
-          defaultValue="Hello World"
-          variant="standard"
-        />
-        <TextField
-          disabled
-          id="standard-disabled"
-          label="Disabled"
-          defaultValue="Hello World"
-          variant="standard"
-        />
-        <TextField
-          id="standard-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="standard"
-        />
-        <TextField
-          id="standard-read-only-input"
-          label="Read Only"
-          defaultValue="Hello World"
-          InputProps={{
-            readOnly: true,
-          }}
-          variant="standard"
-        />
-        <TextField
-          id="standard-number"
-          label="Number"
-          type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          variant="standard"
-        />
-        <TextField
-          id="standard-search"
-          label="Search field"
-          type="search"
-          variant="standard"
-        />
-        <TextField
-          id="standard-helperText"
-          label="Helper text"
-          defaultValue="Default Value"
-          helperText="Some important text"
-          variant="standard"
-        />
-      </div>
-    </Box>
+    </div>
   );
-} 
+};
+
+export default KYCForm;
