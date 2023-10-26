@@ -18,8 +18,8 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const firestore = getFirestore(app);
+const firebase = initializeApp(firebaseConfig);
+const firestore = getFirestore(firebase);
 
 const containerStyle = {
   marginTop: "50px",
@@ -64,6 +64,15 @@ const EditButton = {
   borderRadius: '4px',
   cursor: 'pointer',
 }
+const DeleteButton = {
+  backgroundColor: 'Red',
+  color: 'white',
+  border: 'none',
+  padding: '8px 16px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  marginleft: '16px'
+}
 
 function ProductListing() {
   const [products, setProducts] = useState([]);
@@ -94,11 +103,11 @@ function ProductListing() {
 
   const handleSave = async (id) => {
     try {
-      // Check if edited value is empty and set it to null or an empty string
+      
       const updatedValue = { ...editedValues[id] };
       for (const key in updatedValue) {
         if (!updatedValue[key]) {
-          updatedValue[key] = null; // or updatedValue[key] = '';
+          updatedValue[key] = null; 
         }
       }
 
@@ -108,7 +117,12 @@ function ProductListing() {
       console.error('Error updating document: ', error);
     }
   };
+  const handleDelete = (id) => {
+    /* collection('products').doc(id).delete(); */
+    deleteDoc(doc(firestore, 'products', id))
+    alert("Products Successfully Deleted. Please refresh page")
 
+  }
   const handleChange = (id, field, value) => {
     setEditedValues({
       ...editedValues,
@@ -186,14 +200,17 @@ function ProductListing() {
                       <strong>Product Category:</strong> {product.category} {/* Display category without edit option */}
                       <br />
                       {editMode[product.id] ? (
-                        <button onClick={() => handleSave(product.id)}>
+                        <button style={EditButton} onClick={() => handleSave(product.id)}>
                           Save
                         </button>
                       ) : (
-                        <button onClick={() => handleEdit(product.id) }>
+                        <button style={EditButton} onClick={() => handleEdit(product.id) }>
                           Edit
                         </button>
                       )}
+                      <button style={DeleteButton} onClick={() => handleDelete(product.id)}>
+                        Delete 
+                      </button>
                     </p>
                     <LongMenu />
                   </div>

@@ -178,7 +178,6 @@ const ConsignmentForm = () => {
           <select value={productCategory} onChange={handleProductCategoryChange}>
             <option value="">Select Product Category</option>
             <option value="Ceramics">Ceramics</option>
-            {/* ... (other options) */}
           </select>
         </div>
 
