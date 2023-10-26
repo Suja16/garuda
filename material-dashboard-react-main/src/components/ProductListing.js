@@ -108,6 +108,8 @@ function ProductListing() {
       for (const key in updatedValue) {
         if (!updatedValue[key]) {
           updatedValue[key] = null; 
+          alert("Page will now reload")
+          window.location.reload();
         }
       }
 
@@ -117,12 +119,14 @@ function ProductListing() {
       console.error('Error updating document: ', error);
     }
   };
+
   const handleDelete = (id) => {
     /* collection('products').doc(id).delete(); */
     deleteDoc(doc(firestore, 'products', id))
-    alert("Products Successfully Deleted. Please refresh page")
-
+    alert("Products Successfully Deleted. Page will now refresh")
+    window.location.reload();
   }
+  
   const handleChange = (id, field, value) => {
     setEditedValues({
       ...editedValues,
