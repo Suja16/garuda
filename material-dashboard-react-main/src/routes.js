@@ -17,6 +17,7 @@ import ProductListing from "components/ProductListing";
 import EditProduct  from "components/Edit-Product";
 import Pod from "components/Pod";
 import PostOfficeFinder from "components/postofficefinder";
+import Landing from "components/landing_com/landing";
 
 const routes = [
   {
@@ -107,6 +108,16 @@ const routes = [
     route: "postofficefinder",
     component: <PostOfficeFinder  />,
   },
+
+  {
+    type: "collapse",
+    name: "landing page",
+    key: "landingpage",
+    icon: <Icon fontSize="small">call-support</Icon>,
+    route: "landingpage",
+    component: <Landing />,
+  },
+
   
 ];
 

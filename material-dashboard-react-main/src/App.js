@@ -45,6 +45,7 @@ import EditProduct from 'components/Edit-Product';
 import { Edit } from "@mui/icons-material";
 import Overview from "layouts/profile";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import landing from "components/landing_com/landing";
 
 
 export default function App() {
