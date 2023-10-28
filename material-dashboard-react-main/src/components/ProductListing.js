@@ -108,7 +108,6 @@ function ProductListing() {
       for (const key in updatedValue) {
         if (!updatedValue[key]) {
           updatedValue[key] = null; 
-          alert("Page will now reload")
           window.location.reload();
         }
       }
@@ -123,7 +122,6 @@ function ProductListing() {
   const handleDelete = (id) => {
     /* collection('products').doc(id).delete(); */
     deleteDoc(doc(firestore, 'products', id))
-    alert("Products Successfully Deleted. Page will now refresh")
     window.location.reload();
   }
   
