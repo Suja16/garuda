@@ -1,0 +1,20 @@
+/* .container{
+    height: 700px;
+} */
+
+
+
+
+.custom-border-nav-two{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+.logo-image {
+    height: 70px;         
+    width: auto;           
+    background: transparent; 
+    margin-right: 10px;
+  }
+  
