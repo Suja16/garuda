@@ -199,7 +199,7 @@ function ProductListing() {
                       <br />
                       <strong>Product SKU:</strong> {product.sku}
                       <br />
-                      <strong>Product Category:</strong> {product.category} {/* Display category without edit option */}
+                      <strong>Product Category:</strong> {product.category} {/* DONT MAKE MUTABLE */}
                       <br />
                       {editMode[product.id] ? (
                         <button style={EditButton} onClick={() => handleSave(product.id)}>
@@ -207,7 +207,7 @@ function ProductListing() {
                         </button>
                       ) : (
                         <button style={EditButton} onClick={() => handleEdit(product.id) }>
-                          Edit
+                          Quick Edit
                         </button>
                       )}
                       <button style={DeleteButton} onClick={() => handleDelete(product.id)}>
