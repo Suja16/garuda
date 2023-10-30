@@ -18,6 +18,7 @@ import EditProduct  from "components/Edit-Product";
 import Pod from "components/Pod";
 import PostOfficeFinder from "components/postofficefinder";
 import Landing from "components/landing_com/landing";
+import Info from "components/landing_com/How it works/Info";
 
 const routes = [
   {
@@ -116,6 +117,11 @@ const routes = [
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "landingpage",
     component: <Landing />,
+  },
+
+  {
+    route: "info",
+    component: <Info />,
   },
 
   

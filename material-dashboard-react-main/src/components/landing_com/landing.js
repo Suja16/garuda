@@ -8,6 +8,8 @@ import Features from './Features';
 import MSME from './MSME';
 import StayUpdated from './StayUpdated';
 import Footer from './Footer';
+import './landing.css';
+import 'tailwindcss/tailwind.css';
 
 function Landing() { // Change the function name to 'landing'
   const items = [
