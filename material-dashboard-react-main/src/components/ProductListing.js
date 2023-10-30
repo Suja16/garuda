@@ -122,7 +122,7 @@ function ProductListing() {
   const handleDelete = (id) => {
     /* collection('products').doc(id).delete(); */
     deleteDoc(doc(firestore, 'products', id))
-    /* window.location.reload(); */
+    window.location.reload();
   }
   
   const handleChange = (id, field, value) => {
