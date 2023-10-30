@@ -1,0 +1,139 @@
+/* Info.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    margin: 0;
+    background-color: #F0F2F5;
+    font-family: Arial, sans-serif;
+}
+
+.registration-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 978px;
+    height: 128px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.big-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1068px;
+    height: auto;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 2px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 65px;
+    
+}
+
+.registration-box-2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px;
+    border: 2px solid #1976d2;
+    margin: 10px;
+    width: 619px;
+    height: 100px;
+    
+}
+
+.registration-box-1 {
+    display: flex;
+    align-items: center;
+    width: 545px;
+    height: 80px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 90px;
+}
+
+.registration-box-4 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    width: 619px;
+    height: 80px;
+    padding-left: 90px;
+}
+
+.circle-blue {
+    width: 50px;
+    height: 50px;
+    background-color: #1976d2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px; /* Slightly smaller font size */
+}
+
+.circle-yellow {
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px; /* Slightly smaller font size */
+}
+
+.step {
+    width: 100px;
+    height: 40px;
+    background-color: #FFD700;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px; /* Slightly smaller font size */
+}
+
+h1 {
+    font-size: 20px; /* Slightly smaller font size */
+    margin: 0;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
+}
