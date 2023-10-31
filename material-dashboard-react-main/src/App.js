@@ -188,7 +188,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/product-form" element={<ProductForm />} />
-        <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="*" element={<Navigate to="/landingpage" />} />
         <Route path="/editprod" element={<EditProduct />} />
       </Routes>
      
