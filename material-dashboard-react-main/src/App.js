@@ -158,7 +158,7 @@ export default function App() {
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
         <CssBaseline />
-        {layout === "dashboard" && pathname !== "/landingpage" && (
+        {layout === "dashboard" && pathname !== "/landingpage" && pathname !== "/login" && (
           <>
             <Sidenav
               color={sidenavColor}
@@ -184,7 +184,7 @@ export default function App() {
     <AuthProvider>
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
-      {layout === "dashboard" && pathname !== "/landingpage" && (
+      {layout === "dashboard" && pathname !== "/landingpage" && pathname !== "/login" && (
         <>
           <Sidenav
             color={sidenavColor}

@@ -21,6 +21,7 @@ import Landing from "components/landing_com/landing";
 import Info from "components/landing_com/How it works/Info";
 import ChatBox from "components/chatbox/chatbox";
 import NotificationBox from "components/queries";
+import Login from "layouts/login/login";
 
 const routes = [
   {
@@ -133,6 +134,10 @@ const routes = [
     route: "queries",
     component: <NotificationBox/>,
   },
+  {
+    route: "Login",
+    component: <Login />
+  }
 
 
   
