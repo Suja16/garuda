@@ -84,63 +84,71 @@ export default PostOfficeFinder; */
 //THIS IS THE TEXT BASED POST OFFICE FINDER
 //DEVELOPMENT OF MAP BASED IS UNDERWAY
 
+/* center: [72.8839000077673, 19.021412641574997], */
+/* pk.eyJ1IjoiYWRpdHlhLWNoYXZhbiIsImEiOiJjbG80ZnE3MGUwMW52MmtvMmVjcjNiYWs3In0.ELnPs9TfN8H2q2bF21eSww */
 
 import React, { useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import "./Map.css"; // Import the CSS file for styling
 
 function Map() {
-  const [mapData, setMapData] = useState(null);
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
-    
     mapboxgl.accessToken = "pk.eyJ1IjoiYWRpdHlhLWNoYXZhbiIsImEiOiJjbG80ZnE3MGUwMW52MmtvMmVjcjNiYWs3In0.ELnPs9TfN8H2q2bF21eSww"; // Replace with your Mapbox access token
-    const map = new mapboxgl.Map({
+
+    const mapInstance = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/mapbox/streets-v11", 
-      center: [72.8839000077673,19.021412641574997], 
-      zoom: 12, 
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [72.8839000077673, 19.021412641574997], // Set an initial center
+      zoom: 12, // Set an initial zoom
     });
 
-    
-    const searchEndpoint = "https://api.mapbox.com/search/searchbox/v1/retrieve/dXJuOm1ieHJldDpJcEpoSE5fRDhET3RTR0NVN3dWRDIxQ0NWQmQzUU50dFY4YXZzZUlKZlRLT1ZVaUZyU29tOGlhZWVmSEZfdXdDRjJ6Q0hGWjVVLVhJWm9TLVlTOVdwUXpGYklld3pEdld2QVp1QkJZUnZpUmE0SkJWbDZqRnVyckZrYkZlZm1MWnJQazQzeDhDc2Z5NW9WZG9FbjFVR19tb0FJYW43TjVoenNpaUcta042STViOUloc1pueDZLWTdSMk5VMVZLSzQ3MTBqVnJyNVo5dkx4TnJRYlFPYUVXaHluMm5KZlV0b0NiVzRaY2NqOVhSaUw2bEtsZUREYk1RRlZaNEtybkZFTkFSY29STkRMeUJobXdkOXBfNm45SGk4MDlZNk1IcmRobUZLRktBUFVNRmdRY0FTSVNMUzRnTnlkVE9QUEt4NER2VWU2bVNJem5LR1NCNkRLTkc4dUt3UldySjQwM25KQjh6MUY3cl9MWkJ3dm1UbG10RUdKeS02UVJjY1U2N1VvN00yTkk5WTJmVEtab212blVMYmRQX085YmpBTHA1RkllYzV3ZG51ZlNCZDQ4cTRXcnhDc0taS0FTUHZNTDQ3WVNNeDdDZl85YXZJblB4eHhLUkh4NHcyZEZ0Uk54dF9MLVRBWUZxYS1LOFRiVTh3eG9nVW53cXQwQl83SkRMMkdTRk5taUc3QzlQbFJoSmUxcllzS1l0SFFJNlE2TmQyR0ZXTzRfNktxOFliUF9HZkY4SVJHS3AzZEJsdmxjOWg4dWVZdTRrMWRFaG9Xb21NeGpkckU0a190VE04Uk13UDZGUlRhMUxUa0VRMlQ3ZnJ1Smh5aDBzc1hFYXVHb2xpNENuTm8wQldZQzdoVWhTbEU0NGw5dDgtOWpvS3htWDNpXzNxZzFseDlSUjE0U3F2dWo0dlhYa2NWYWlocWM5bWJlUlkza09BYm1BWUg2TlNqOEp5UFJDVlNDVUJiM2JGTU0wd04xMmlyRkxFdm1udGNzdXpxN01Ea1NVekIzRU5NYUVmaHhDbmdFZ0xVanN3QmJUVllaMnJrSHk0UDFyQ2tNc2hpTGVXMkw1eVFvaHRUREhaa0hYVzJPbjFMVWVsM0VnR0t1OE9peGRQVTJoZVVrbU5YSGtxZm9Rd0J5SG1CV1AyZmRocXJmNHJjYkFCejJuTGJ1NXB1SzNRalJqSlhZVHFRY2F3UE1jUldUdGRpenhHbGN4dFRyWXJtSVIzaUdIU3VSV2hCaVdBN2J3djdyX05zVW5MU0N1cVdFeDh0ZGRUeTg2MDE5STI1bmhOcWtLSlVpc3lqell1WG04NnBHRU5sVTdHakgtOFlCMXBjZkwyM1ZpaW8xWkYwdHc5bmRxVzMyVlFzQWpITGJNdGx6enE4YkJ5Z2RSdGl2UktJdzQ3WGRnRGVtSU8yaFYwR0x1b0laSm9jVTlhSk4wSjVrZFpmWHJWc3Q3WWZFeEdRZWs0Y05ZOEhvSmxUVUpxU3M5cm1sM1IyanR3V18yU1VJNi1qRUtGTlhvRDZmQjBrMVU3eHJ0VHh3aHFmT1RlSHZuYnBxWXN1cWRxb3I1eGFfRkZmZzRUQ09YbFBZd18zMDZsYmFLRElyVUpZYWZudjZ4c3FDazFucmY3Y0lwR2Iybld5eTU4WjJRX0I2dFZqRTk5Qk1MVHdJTG5tbHA0ZDV3T2xhcU85ZnNhS1B0TWZwUnZPU21HbThhSXNOV29BZXFqTE1idDlmcUtnekc2Y25adUl6VHM1UTNxSFpzT0FlR0JlOGtUSUJkV0Jnb1BSS1YtQUE2aGFKMk1pVkUtOXZMZmNBM0FxYkN2QTRDcFQyNWVPaGRWUDhRN25WVTc4aU5MUUtmbGxUREVjVmhNMmNkYVRWbHVQdXZVRVpudm95Tll6NkFnajZxUm9PRlpPcEl6WWRfSmltTWszOWpsQWlOcTd3T1o2a0VyVHJ0VEpwWk0xTWRDb2lHRnhCcmN4ODBqMkFoalUwMXA=?session_token=0c0831dc-a8cc-4a21-88b6-22b281f085da&access_token=pk.eyJ1IjoiYWRpdHlhLWNoYXZhbiIsImEiOiJjbG80ZnE3MGUwMW52MmtvMmVjcjNiYWs3In0.ELnPs9TfN8H2q2bF21eSww";
+    mapInstance.on("load", async () => {
+      setMap(mapInstance);
 
-    
-    fetch(searchEndpoint)
-      .then((response) => response.json())
-      .then((data) => {
-        setMapData(data);
+      // Add map controls here
+      mapInstance.addControl(new mapboxgl.NavigationControl(), "top-right");
+      mapInstance.addControl(new mapboxgl.ScaleControl(), "bottom-left");
+      mapInstance.addControl(new mapboxgl.FullscreenControl(), "top-right");
 
-        
-        const coordinates = data.features.map((feature) => feature.center);
-
-        
-        coordinates.forEach((coord) => {
-          new mapboxgl.Marker().setLngLat(coord).addTo(map);
-        });
-
-        
-        const bounds = new mapboxgl.LngLatBounds();
-        coordinates.forEach((coord) => {
-          bounds.extend(coord);
-        });
-        map.fitBounds(bounds, { padding: 50 }); 
-      })
-      .catch((error) => {
-        console.error("Error fetching Mapbox data: ", error);
+      // Add Geocoding control
+      const geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        marker: true, // Disabling the default marker
       });
+      
+
+      mapInstance.addControl(geocoder, "top-left");
+
+      geocoder.on("result", async (e) => {
+        // Handle the result when a user selects a location
+        // Example: Fetch data or perform other operations based on the selected location
+        console.log("Selected location:", e.result);
+      });
+    });
+
+    return () => {
+      if (mapInstance) {
+        mapInstance.remove();
+      }
+    };
   }, []);
 
+  useEffect(() => {
+    if (map) {
+      map.on("moveend", async () => {
+        // Add logic here for any future functionality triggered by map movement
+      });
+    }
+  }, [map]);
+
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div
-        id="map"
-        style={{
-          width: "500px", 
-          height: "500px", 
-          marginLeft: "100px",
-          marginTop: "150px" 
-        }}
-      ></div>
+    <div className="map-container">
+      <div id="map" className="map"></div>
     </div>
   );
 }
