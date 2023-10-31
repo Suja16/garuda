@@ -19,6 +19,7 @@ import Pod from "components/Pod";
 import PostOfficeFinder from "components/postofficefinder";
 import Landing from "components/landing_com/landing";
 import Info from "components/landing_com/How it works/Info";
+import ChatBox from "components/chatbox/chatbox";
 
 const routes = [
   {
@@ -122,6 +123,10 @@ const routes = [
   {
     route: "info",
     component: <Info />,
+  },
+  {
+    route: "chatbox",
+    component: <ChatBox />,
   },
 
   

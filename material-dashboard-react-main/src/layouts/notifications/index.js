@@ -139,9 +139,6 @@ function Notifications() {
             <Card>
               <MDBox p={2} lineHeight={0}>
                 <MDTypography variant="h5">Notifications</MDTypography>
-                <MDTypography variant="button" color="text" fontWeight="regular">
-                  Notifications on this page use Toasts from Bootstrap. Read more details here.
-                </MDTypography>
               </MDBox>
               <MDBox p={2}>
                 <Grid container spacing={3}>

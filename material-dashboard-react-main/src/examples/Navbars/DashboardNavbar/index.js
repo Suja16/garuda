@@ -96,7 +96,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
       <a href="">
         <NotificationItem icon={<Icon>receipt receipt_long</Icon>} title="Queries"/>
       </a>
+      <a href="/chatbox">
       <NotificationItem icon={<Icon>email</Icon>} title="Seller-Buyer Interface" />
+      </a>
     </Menu>
   );
 
