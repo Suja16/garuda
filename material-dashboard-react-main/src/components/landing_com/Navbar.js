@@ -308,6 +308,19 @@ const Landnav = () => {
                   >
                     Login
                   </a>
+                  <a
+                    href=""
+                    className="text-white-300 font-normal hover:text-gray-400 duration-300"
+                    style={{ padding: "10px", border: "2px solid white", borderColor: "white", color: '#fff',marginLeft:"2vw", // Equivalent to text-white-300
+                    fontWeight: '400', // Equivalent to font-normal
+                    '&:hover': {
+                      color: '#ccc', // Equivalent to hover:text-gray-400
+                      transition: 'color 0.3s', // Equivalent to duration-300
+                    }
+                   }}
+                  >
+                    Login as buyer
+                  </a>
                 </li>
 
             </ul>
