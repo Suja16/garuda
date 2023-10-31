@@ -90,65 +90,120 @@ export default PostOfficeFinder; */
 import React, { useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import "./Map.css"; // Import the CSS file for styling
+import "./Map.css";
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 
 function Map() {
   const [map, setMap] = useState(null);
+  const [markedLocations, setMarkedLocations] = useState([]);
 
   useEffect(() => {
     mapboxgl.accessToken = "pk.eyJ1IjoiYWRpdHlhLWNoYXZhbiIsImEiOiJjbG80ZnE3MGUwMW52MmtvMmVjcjNiYWs3In0.ELnPs9TfN8H2q2bF21eSww"; // Replace with your Mapbox access token
 
-    const mapInstance = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: [72.8839000077673, 19.021412641574997], // Set an initial center
-      zoom: 12, // Set an initial zoom
-    });
+    const initializeMap = (userLocation) => {
+      const mapInstance = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: userLocation,
+        zoom: 12,
+      });
 
-    mapInstance.on("load", async () => {
-      setMap(mapInstance);
+      mapInstance.on("load", () => {
+        setMap(mapInstance);
 
-      // Add map controls here
-      mapInstance.addControl(new mapboxgl.NavigationControl(), "top-right");
-      mapInstance.addControl(new mapboxgl.ScaleControl(), "bottom-left");
-      mapInstance.addControl(new mapboxgl.FullscreenControl(), "top-right");
+        mapInstance.addControl(new mapboxgl.NavigationControl(), "top-right");
+        mapInstance.addControl(new mapboxgl.ScaleControl(), "bottom-left");
+        mapInstance.addControl(new mapboxgl.FullscreenControl(), "top-right");
+        addMarker(userLocation, mapInstance);
+        addSearchBox(mapInstance, "top-left");
+        fetchPostOfficeLocations(userLocation, mapInstance);
+      });
+    };
 
-      // Add Geocoding control
+    const addSearchBox = (mapInstance, position) => {
       const geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
-        marker: true, // Disabling the default marker
+        marker: true,
       });
-      
-
-      mapInstance.addControl(geocoder, "top-left");
-
-      geocoder.on("result", async (e) => {
-        // Handle the result when a user selects a location
-        // Example: Fetch data or perform other operations based on the selected location
-        console.log("Selected location:", e.result);
+      geocoder.on("result", (event) => {
+        const { result } = event;
+        const coordinates = result.center;
+        const link = `https://www.google.com/maps/search/?api=1&query=${coordinates[1]},${coordinates[0]}`;
+        console.log("Google Maps link:", link);
       });
-    });
+
+      mapInstance.addControl(geocoder, position);
+    };
+
+    const addMarker = (coordinates, mapInstance) => {
+      const marker = new mapboxgl.Marker({ color: "#FF0000" }) // Set the color to red
+        .setLngLat(coordinates)
+        .addTo(mapInstance);
+    };
+
+    const fetchPostOfficeLocations = async (userLocation, mapInstance) => {
+      const response = await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/post%20office.json?proximity=${userLocation[0]},${userLocation[1]}&access_token=${mapboxgl.accessToken}`
+      );
+      const data = await response.json();
+
+      if (data && data.features) {
+        setMarkedLocations(data.features);
+        data.features.forEach((feature) => {
+          new mapboxgl.Marker()
+            .setLngLat(feature.center)
+            .addTo(mapInstance)
+            .setPopup(
+              new mapboxgl.Popup().setHTML(
+                `<a href="https://www.google.com/maps/search/?api=1&query=${feature.center[1]},${feature.center[0]}" target="_blank">${feature.center[1]}, ${feature.center[0]}</a>`
+              )
+            );
+        });
+      }
+    };
+
+    const getUserLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLocation = [position.coords.longitude, position.coords.latitude];
+            initializeMap(userLocation);
+          },
+          (error) => {
+            console.error("Error getting user location:", error);
+            initializeMap([72.8839, 19.0214]);
+          }
+        );
+      } else {
+        initializeMap([72.8839, 19.0214]);
+      }
+    };
+
+    getUserLocation();
 
     return () => {
-      if (mapInstance) {
-        mapInstance.remove();
+      if (map) {
+        map.remove();
       }
     };
   }, []);
 
-  useEffect(() => {
-    if (map) {
-      map.on("moveend", async () => {
-        // Add logic here for any future functionality triggered by map movement
-      });
-    }
-  }, [map]);
-
   return (
     <div className="map-container">
       <div id="map" className="map"></div>
+      <div>
+        {markedLocations.length > 0 && (
+          <div>
+            <h3>Marked Locations' Coordinates:</h3>
+            <ul>
+              {markedLocations.map((location, index) => (
+                <li key={index}>{`${location.center[1]}, ${location.center[0]}`}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
