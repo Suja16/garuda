@@ -23,10 +23,30 @@ const cartSlice = createSlice({
       if (existedItemIndex >= 0) {
         //increase quantity
         state.cartItems[existedItemIndex].cartQuantity += 1;
-      } 
-      else {
+
+        toast.info("Quantity Increased", {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
         // add to cart
         const assemblingItem = { ...action.payload, cartQuantity: 1 };
+        toast.success("Product added", {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         state.cartItems.push(assemblingItem);
       }
       //local storage
@@ -55,6 +75,18 @@ const cartSlice = createSlice({
     },
     removeAllFromCart(state, action) {
       state.cartItems = [];
+
+      toast.error("Cart Cleared", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
       // updated local storage
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
@@ -67,8 +99,18 @@ const cartSlice = createSlice({
 
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
-      } 
-      else if (state.cartItems[itemIndex].cartQuantity === 1) {
+
+        toast.warn("Quantity Decreased", {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else if (state.cartItems[itemIndex].cartQuantity === 1) {
         const updatedCartItem = state.cartItems.filter(
           (item) => item.id !== action.payload.id
         );
@@ -92,6 +134,7 @@ const cartSlice = createSlice({
       const subTotal = state.cartItems.reduce((acc, item) => {
         const { price, cartQuantity } = item;
         const itemTotal = price * cartQuantity;
+
         acc += itemTotal;
         return acc;
       }, 0);

@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background-color: rgb(58, 28, 88);
+  color: #fefefe;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(86, 50, 145);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 15%;
+  background-color: #7d758d;
+  border-radius: 50px;
+}
+
+/* Utilities */
+.space-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* slider */
+
+.slider {
+  height: calc(100vh - 5rem);
+  width: 500vw;
+  display: flex;
+  transition: 1s ease;
+}
+
+/* slide */
+
+.slide {
+  width: 100vw;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+ */
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2a5481;
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #4b627b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #5685bb;
+}
