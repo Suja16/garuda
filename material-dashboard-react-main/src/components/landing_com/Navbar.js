@@ -128,6 +128,7 @@
 // export default Landnav;
 
 import React, { useState } from "react";
+import garudaLogo from '../../assets/images/logos/garuda_logo.png';
 
 import "./Navbar.css";
 
@@ -190,7 +191,7 @@ const Landnav = () => {
                 }}
               />
               <img
-                src="Images_/logo.png"
+                src={garudaLogo}
                 alt="Garuda Logo"
                 className="logo-image" style={{
                   width: '3rem',  
