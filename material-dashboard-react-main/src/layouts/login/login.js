@@ -47,7 +47,7 @@ const Login = () => {
                     color="secondary"
                     label="Email"
 
-                    intputRef={emailRef}
+                    inputRef={emailRef}
 
                     fullWidth
                     required
@@ -59,7 +59,7 @@ const Login = () => {
                     color="secondary"
                     label="Password"
 
-                    intputRef={passwordRef}
+                    inputRef={passwordRef}
 
                     fullWidth
                     required

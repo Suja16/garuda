@@ -40,17 +40,17 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user)
-            // setLoading(false)
-            const abc = async() => {
-                if (!user)return
-                const q = query(collection(db, "profiles"), where("user_id","==", user.uid));
-                const docSnap = await getDocs(q);
-                console.log(docSnap);
+            setLoading(false)
+            // const abc = async() => {
+            //     if (!user)return
+            //     const q = query(collection(db, "profiles"), where("user_id","==", user.uid));
+            //     const docSnap = await getDocs(q);
+            //     console.log(docSnap);
                 
 
-            }
+            // }
 
-            abc()
+            // abc()
             setLoading(false)
         })
 

@@ -19,4 +19,4 @@ export async function signIn(email, password) {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth(app);
-export const db = getFirestore(db);
+// export const db = getFirestore(db);
