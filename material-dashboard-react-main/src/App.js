@@ -1,5 +1,5 @@
 // ok
-
+import React from "react";
 import { useState, useEffect, useMemo } from "react";
 
 // react-router components
@@ -154,10 +154,11 @@ export default function App() {
   );
 
   return direction === "rtl" ? (
-    <AuthProvider>
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
         <CssBaseline />
+        <AuthProvider>
+        <React.Fragment>
         {layout === "dashboard" && pathname !== "/landingpage" && pathname !== "/login" && (
           <>
             <Sidenav
@@ -177,13 +178,16 @@ export default function App() {
           {getRoutes(routes)}
           <Route path="*" element={<Navigate to="/landingpage" />} />
         </Routes>
+        </React.Fragment>
+        </AuthProvider>
       </ThemeProvider>
     </CacheProvider>
-    </AuthProvider>
   ) : (
-    <AuthProvider>
+
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
+      <AuthProvider>
+      <React.Fragment>
       {layout === "dashboard" && pathname !== "/landingpage" && pathname !== "/login" && (
         <>
           <Sidenav
@@ -205,9 +209,11 @@ export default function App() {
         <Route path="*" element={<Navigate to="/landingpage" />} />
         <Route path="/editprod" element={<EditProduct />} />
       </Routes>
-     
+
+      </React.Fragment>
+      </AuthProvider>
     </ThemeProvider>
-    </AuthProvider>
+
     
   );
 }

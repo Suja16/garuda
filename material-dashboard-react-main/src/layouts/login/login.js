@@ -14,7 +14,7 @@ const Login = () => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState('');
     const { login, currentUser } = useAuth()
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,11 +23,14 @@ const Login = () => {
             setError('');
             setLoading(true);
             await signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-            history('/dashboard')
+            navigate("/dashboard")
         } catch (err) {
             setError("Failed to Login")
+            console.log(err.message);
+            alert(err.message);
         }
         setLoading(false)
+
     }
 
     return (
@@ -36,7 +39,7 @@ const Login = () => {
             <h2>Login</h2>
             {currentUser && currentUser.email}
             {error && <Alert severity="error">{error}</Alert>}
-            <form onSubmit={handleSubmit} action={<Link to="/login" />}>
+            <form onSubmit={handleSubmit} action={<Link to="/dashboard" />}>
 
                 <TextField
                     type="email"

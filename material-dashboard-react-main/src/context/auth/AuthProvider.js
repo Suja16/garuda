@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "config/firebase";
+import { collection, query, where, getDocs, deleteDoc, doc, addDoc } from "firebase/firestore";
+import { db } from "config/firebase";
 
 const AuthContext = React.createContext()
 
@@ -38,6 +40,17 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user)
+            // setLoading(false)
+            const abc = async() => {
+                if (!user)return
+                const q = query(collection(db, "profiles"), where("user_id","==", user.uid));
+                const docSnap = await getDocs(q);
+                console.log(docSnap);
+                
+
+            }
+
+            abc()
             setLoading(false)
         })
 
