@@ -114,8 +114,8 @@ const routes = [
 
   {
     type: "collapse",
-    name: "landing page",
-    key: "landingpage",
+    name: "Landing page",
+    key: "Landingpage",
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "landingpage",
     component: <Landing />,
