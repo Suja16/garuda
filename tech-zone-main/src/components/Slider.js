@@ -5,14 +5,6 @@ import Slide from "./Slide";
 
 const data = [
   {
-    id: 1,
-    src: "https://www.mrdiy.co.in/?cur=promotion/download&fid=20",
-    headline: "",
-    body: "",
-    cta: "Shop now",
-    category: "sale",
-  },
-  {
     id: 2,
     src: "https://media.cntraveler.com/photos/54e368046450ad091fd9a8e8/16:9/w_2580,c_limit/martha-graeff-nyfw-tout.jpg",
     headline: "Shop For the Latest Trends",

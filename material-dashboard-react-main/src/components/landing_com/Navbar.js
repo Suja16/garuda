@@ -309,7 +309,7 @@ const Landnav = () => {
                     Login
                   </a>
                   <a
-                    href=""
+                    href="https://garuda-buyer.vercel.app/"
                     className="text-white-300 font-normal hover:text-gray-400 duration-300"
                     style={{ padding: "10px", border: "2px solid white", borderColor: "white", color: '#fff',marginLeft:"2vw", // Equivalent to text-white-300
                     fontWeight: '400', // Equivalent to font-normal
