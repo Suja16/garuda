@@ -34,7 +34,7 @@ const ConsignmentForm = () => {
   const [showTitleHint, setShowTitleHint] = useState(false);
 
   const blockedKeywords = [
-    'CATHINONE', 'DOB', 'BROLAMFETAMINE', 'DET', 'DMA', // ... (your other keywords)
+    'CATHINONE', 'DOB', 'BROLAMFETAMINE', 'DET', 'DMA', 'Gun', 'engine oil' // ... (your other keywords)
   ];
 
   const handleProductTitleChange = (event) => {
