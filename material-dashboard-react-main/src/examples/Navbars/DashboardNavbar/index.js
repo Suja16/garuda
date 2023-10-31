@@ -93,7 +93,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
       onClose={handleCloseMenu}
       sx={{ mt: 2 }}
     >
-      <a href="">
+      <a href="/queries">
         <NotificationItem icon={<Icon>receipt receipt_long</Icon>} title="Queries"/>
       </a>
       <a href="/chatbox">

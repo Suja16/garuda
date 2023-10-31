@@ -20,6 +20,7 @@ import PostOfficeFinder from "components/postofficefinder";
 import Landing from "components/landing_com/landing";
 import Info from "components/landing_com/How it works/Info";
 import ChatBox from "components/chatbox/chatbox";
+import NotificationBox from "components/queries";
 
 const routes = [
   {
@@ -128,6 +129,11 @@ const routes = [
     route: "chatbox",
     component: <ChatBox />,
   },
+  {
+    route: "queries",
+    component: <NotificationBox/>,
+  },
+
 
   
 ];
