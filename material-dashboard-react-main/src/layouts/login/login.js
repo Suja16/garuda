@@ -7,7 +7,6 @@ import { signIn } from "config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "config/firebase";
 
-
 const Login = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -34,44 +33,56 @@ const Login = () => {
     }
 
     return (
-        <AuthProvider>
-            <React.Fragment>
-            <h2>Login</h2>
-            {currentUser && currentUser.email}
-            {error && <Alert severity="error">{error}</Alert>}
-            <form onSubmit={handleSubmit} action={<Link to="/dashboard" />}>
+        <div style={{ display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center", minHeight: "100vh",background:"white" }}>
+            <AuthProvider>
+                <React.Fragment>
+                    <div style={{ textAlign: "center" }}>
+                        <h2>Login</h2>
+                        {currentUser && currentUser.email}
+                        {error && <Alert severity="error">{error}</Alert>}
+                    </div>
+                    <form onSubmit={handleSubmit}>
 
-                <TextField
-                    type="email"
-                    variant="outlined"
-                    color="secondary"
-                    label="Email"
+                        <TextField
+                            type="email"
+                            variant="outlined"
+                            color="secondary"
+                            label="Email"
+                            size="small" // Set input size to smaller
+                            inputRef={emailRef}
+                            fullWidth
+                            required
+                            sx={{ marginBottom: 2 }}
+                        />
+                        <TextField
+                            type="password"
+                            variant="outlined"
+                            color="secondary"
+                            label="Password"
+                            size="small" // Set input size to smaller
+                            inputRef={passwordRef}
+                            fullWidth
+                            required
+                            sx={{ marginBottom: 2 }}
+                        />
 
-                    inputRef={emailRef}
-
-                    fullWidth
-                    required
-                    sx={{mb: 4}}
-                />
-                <TextField
-                    type="password"
-                    variant="outlined"
-                    color="secondary"
-                    label="Password"
-
-                    inputRef={passwordRef}
-
-                    fullWidth
-                    required
-                    sx={{mb: 4}}
-                />
-
-                <Button disabled={loading} variant="outlined" color="secondary" type="submit">Log In</Button>
-                </form>
-                <small>Need an account? <Link to="/register">Register Here</Link></small>
-            </React.Fragment>
-        </AuthProvider>
-    )
+                        <Button
+                            disabled={loading}
+                            variant="contained" // Change to contained style
+                            style={{ backgroundColor: '#007bff', color: '#fff' }}
+                            type="submit"
+                            sx={{ marginTop: 2 }}
+                        >
+                            Log In
+                        </Button>
+                    </form>
+                    <div style={{ textAlign: "center", marginTop: 2 }}>
+                        <small>Need an account? <Link to="/register">Register Here</Link></small>
+                    </div>
+                </React.Fragment>
+            </AuthProvider>
+        </div>
+    );
 }
 
 export default Login;
