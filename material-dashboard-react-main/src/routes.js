@@ -106,7 +106,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Find post-office",
+    name: "Find nearest DNK",
     key: "Postofficefinder",
     icon: <Icon fontSize="small">call-support</Icon>,
     route: "postofficefinder",
@@ -115,9 +115,8 @@ const routes = [
 
   {
     type: "collapse",
-    name: "Landing page",
+    name: "Log out",
     key: "Landingpage",
-    icon: <Icon fontSize="small">call-support</Icon>,
     route: "landingpage",
     component: <Landing />,
   },
