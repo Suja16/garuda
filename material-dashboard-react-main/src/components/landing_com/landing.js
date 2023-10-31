@@ -9,6 +9,7 @@ import MSME from './MSME';
 import StayUpdated from './StayUpdated';
 import Footer from './Footer';
 import './landing.css';
+import Why from './Why';
 import 'tailwindcss/tailwind.css';
 
 function Landing() { // Change the function name to 'landing'
@@ -24,15 +25,48 @@ function Landing() { // Change the function name to 'landing'
       <Landnav />
       <CarouselMUI items={items} />
       <Collab />
-      <h1 className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12">Outlet Stores</h1>
+      <h1 className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12 "
+      style={{
+        fontSize: '35px', // Equivalent to text-2xl
+        color: '#2563EB', // Equivalent to text-indigo-700
+        fontWeight: '600', // Equivalent to font-semibold
+        color: '#050d38', // Equivalent to text-[#050d38]
+        marginBottom: '1.25rem', // Equivalent to mb-5
+        textAlign: 'center', // Equivalent to text-center
+        marginTop: '3rem', // Equivalent to mt-12
+      }}
+      
+      >Outlet Stores</h1>
       <PopularCategories />
-      <h1 className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12">About Us</h1>
+      <h1 className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12"
+      style={{
+        fontSize: '35px', // Equivalent to text-2xl
+        color: '#2563EB', // Equivalent to text-indigo-700
+        fontWeight: '600', // Equivalent to font-semibold
+        color: '#050d38', // Equivalent to text-[#050d38]
+        marginBottom: '1.25rem', // Equivalent to mb-5
+        textAlign: 'center', // Equivalent to text-center
+        marginTop: '3rem', // Equivalent to mt-12
+      }}
+      >About Us</h1>
       <AboutUs />
-      <h1 id="features" className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12">Our Services</h1>
+      <Why/>
+      <h1 id="features" className="text-2xl text-indigo-700 font-semibold text-[#050d38] mb-5 text-center mt-12"
+      style={{
+        fontSize: '35px', // Equivalent to text-2xl
+        color: '#2563EB', // Equivalent to text-indigo-700
+        fontWeight: '600', // Equivalent to font-semibold
+        color: '#050d38', // Equivalent to text-[#050d38]
+        marginBottom: '1.25rem', // Equivalent to mb-5
+        textAlign: 'center', // Equivalent to text-center
+        marginTop: '3rem', // Equivalent to mt-12
+      }}
+      >Our Services</h1>
       <Features/>
       <MSME/>
       <StayUpdated/>
       <Footer/>
+     
     </>
   );
 }
