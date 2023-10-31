@@ -47,6 +47,7 @@ import Overview from "layouts/profile";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import landing from "components/landing_com/landing";
 import Info from "components/landing_com/How it works/Info";
+import { AuthProvider } from "context/auth/AuthProvider";
 
 
 export default function App() {
@@ -153,6 +154,7 @@ export default function App() {
   );
 
   return direction === "rtl" ? (
+    <AuthProvider>
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
         <CssBaseline />
@@ -177,7 +179,9 @@ export default function App() {
         </Routes>
       </ThemeProvider>
     </CacheProvider>
+    </AuthProvider>
   ) : (
+    <AuthProvider>
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
       {layout === "dashboard" && pathname !== "/landingpage" && (
@@ -203,5 +207,7 @@ export default function App() {
       </Routes>
      
     </ThemeProvider>
+    </AuthProvider>
+    
   );
 }
