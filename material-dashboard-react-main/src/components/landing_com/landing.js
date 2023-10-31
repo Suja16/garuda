@@ -11,11 +11,13 @@ import Footer from './Footer';
 import './landing.css';
 import Why from './Why';
 import 'tailwindcss/tailwind.css';
+import vivad from '../../assets/images/vivad se vishvas.jpg'
+import khagi from '../../assets/images/khagi mhotosav.jpg'
 
 function Landing() { // Change the function name to 'landing'
   const items = [
-    <img src="image1.jpg" alt="Slide 1" />,
-    <img src="image2.jpg" alt="Slide 2" />,
+    <img src={khagi} alt="Slide 1" />,
+    <img src={vivad} alt="Slide 2" />,
     <img src="image3.jpg" alt="Slide 3" />,
     // Add more slides as needed
   ];
