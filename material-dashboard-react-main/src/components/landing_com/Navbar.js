@@ -129,6 +129,9 @@
 
 import React, { useState } from "react";
 import garudaLogo from '../../assets/images/logos/garuda_logo.png';
+import postlogo from '../../assets/images/logos/post_logo.png'
+import { Link, useHistory } from "react-router-dom";
+
 
 import "./Navbar.css";
 
@@ -180,25 +183,19 @@ const Landnav = () => {
                 alignItems: 'center'
               }}>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnDGbkvs1jyPz-himCSBwBTYbWyE8ihumpDkHtmkE8BQ2xakUqHYnAvpiBaH6q0vUyrf8&usqp=CAU"
+                src={postlogo}
                 alt="Ashoka Logo"
                 className=" logo-image" style={{
-                  width: '3rem',  
+                  width: '7vw',  
                   height: '80px',
-                  maxWidth: '4rem',
-                  maxHeight: '4rem',
-                  marginLeft:'30px'
                 }}
               />
               <img
                 src={garudaLogo}
                 alt="Garuda Logo"
                 className="logo-image" style={{
-                  width: '3rem',  
+                  width: '7vw',  
                   height: '80px',
-                  maxWidth: '4rem',
-                  maxHeight: '4rem',
-                  marginLeft:'30px'
                 }}
               />
             </div>
@@ -222,22 +219,24 @@ const Landnav = () => {
                 Why Garuda
               </span>
               {/* <span className="mx-2 sm:mx-4 text-white-500">|</span> */}
-              <span
-                className="text-lg sm:text-xl font-semibold ml-2 sm:ml-4"
-                style={{ cursor: "pointer", marginLeft:"50px", fontSize: '25px', // Equivalent to text-lg
-                fontWeight: '600', // Equivalent to font-semibold
-                marginRightt: '20px', 
-                color:'white',// Equivalent to ml-2
-                '@media (min-width: 640px)': {
-                  fontSize: '1.25rem', // Equivalent to sm:text-xl
-                  marginLeft: '1rem', // Equivalent to sm:ml-4
-                
-                  
-                }}}
-                
-              >
-                How does it Work
-              </span>
+              <Link
+  to="/info"
+  className="text-lg sm:text-xl font-semibold ml-2 sm:ml-4"
+  style={{
+    cursor: "pointer",
+    marginLeft: "50px",
+    fontSize: "25px",
+    fontWeight: "600",
+    color: "white",
+    '@media (min-width: 640px)': {
+      fontSize: "1.25rem",
+      marginLeft: "1rem",
+    },
+  }}
+>
+  How does it Work
+</Link>
+
               {/* <span className="mx-2 sm:mx-4 text-white-500">|</span> */}
               <span
                 className="text-lg sm:text-xl font-semibold ml-2 sm:ml-4"
