@@ -148,7 +148,7 @@ export default function App() {
       onClick={handleConfiguratorOpen}
     >
       <Icon fontSize="small" color="inherit">
-        settings
+        headset
       </Icon>
     </MDBox>
   );

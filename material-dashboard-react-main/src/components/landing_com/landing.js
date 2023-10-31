@@ -13,12 +13,13 @@ import Why from './Why';
 import 'tailwindcss/tailwind.css';
 import vivad from '../../assets/images/vivad se vishvas.jpg'
 import khagi from '../../assets/images/khagi mhotosav.jpg'
+import join from '../../assets/images/slide3.jpg'
 
 function Landing() { // Change the function name to 'landing'
   const items = [
     <img src={khagi} alt="Slide 1" />,
     <img src={vivad} alt="Slide 2" />,
-    <img src="image3.jpg" alt="Slide 3" />,
+    <img src={join} alt="Slide 3" />,
     // Add more slides as needed
   ];
 

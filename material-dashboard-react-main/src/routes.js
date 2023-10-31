@@ -108,7 +108,7 @@ const routes = [
     type: "collapse",
     name: "Find nearest DNK",
     key: "Postofficefinder",
-    icon: <Icon fontSize="small">call-support</Icon>,
+    icon: <Icon fontSize="small">home</Icon>,
     route: "postofficefinder",
     component: <PostOfficeFinder  />,
   },
