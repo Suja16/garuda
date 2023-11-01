@@ -14,7 +14,7 @@ const Login = () => {
     const [loading, setLoading] = useState('');
     const { login, currentUser } = useAuth()
     const navigate = useNavigate()
-
+    /* alert("Use Following TEST credentials: \n username: hello@admin.com \n Password: 123456")*/
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -38,7 +38,9 @@ const Login = () => {
                 <React.Fragment>
                     <div style={{ textAlign: "center" }}>
                         <h2>Login</h2>
-                        {currentUser && currentUser.email}
+                        <h2>Test credentials:</h2>
+                        <h2>Email: hello@admin.com, Password: 123456</h2>
+                        {/* {currentUser && currentUser.email} */}
                         {error && <Alert severity="error">{error}</Alert>}
                     </div>
                     <form onSubmit={handleSubmit}>
@@ -69,7 +71,7 @@ const Login = () => {
                         <Button
                             disabled={loading}
                             variant="contained" // Change to contained style
-                            style={{ backgroundColor: '#007bff', color: '#fff' }}
+                            style={{ backgroundColor: '#007bff', color: '#fff', textAlign: "center" }}
                             type="submit"
                             sx={{ marginTop: 2 }}
                         >
