@@ -34,7 +34,7 @@ const ConsignmentForm = () => {
   const [showTitleHint, setShowTitleHint] = useState(false);
 
   const blockedKeywords = [
-    'CATHINONE', 'DOB', 'BROLAMFETAMINE', 'DET', 'DMA', 'Gun', 'engine oil' // ... (your other keywords)
+    'CATHINONE', 'DOB', 'BROLAMFETAMINE', 'DET', 'DMA', 'Gun', 'engineoil' // ... (your other keywords)
   ];
 
   const handleProductTitleChange = (event) => {
@@ -178,6 +178,9 @@ const ConsignmentForm = () => {
           <select value={productCategory} onChange={handleProductCategoryChange}>
             <option value="">Select Product Category</option>
             <option value="Ceramics">Ceramics</option>
+            <option value="Textile">Textile</option>
+            <option value="HandiCrafts">HandiCrafts</option>
+            <option value="jewellery">jewellery</option>
           </select>
         </div>
 
