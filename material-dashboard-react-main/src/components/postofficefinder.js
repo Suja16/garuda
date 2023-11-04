@@ -105,7 +105,7 @@ function Map() {
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
         center: userLocation,
-        zoom: 12,
+        zoom: 10,
       });
 
       mapInstance.on("load", () => {
